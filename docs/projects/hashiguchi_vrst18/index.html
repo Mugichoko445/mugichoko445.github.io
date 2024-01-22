@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hashiguchi et al., VRST 2018</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+	<link rel="stylesheet" href="../../assets/academicons-1.9.4/css/academicons.min.css">
+    <link rel="icon" href="../../img/mixlab.png" type="image/x-icon">
+    <script src="../../js/projects.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 max-w-4xl mx-auto font-thin">
+    <main class="p-4 mx-auto mb-8 font-thin">
+        <!--
+            title
+        -->
+        <h1 class="text-4xl font-bold">
+            Perceived Weight of a Rod under Augmented and Diminished Reality Visual Effects ⚖️
+        </h1>
+        <!--
+            authors
+        -->
+        <h2 class="text-lg pt-2 text-gray-600">
+            Satoshi Hashiguchi<sup>1</sup>, Shohei Mori<sup>2</sup>, Miho Tanaka<sup>3</sup>, Fumihisa Shibata<sup>3</sup>, and Asako Kimura<sup>3</sup>
+        </h2>
+        <h2 class="text-lg text-gray-600">
+            <sup>1</sup>Ryukoku University, <sup>2</sup>Graz University of Technology, <sup>3</sup>Ritsumeikan University
+        </h2>
+        <!--
+            venue
+        -->
+        <h2 class="pt-2 text-lg font-mono">
+            ACM Symp. on Virtual Reality Software and Technology (VRST) 2018
+        </h2>
+
+        <!--
+            teaser
+        -->
+        <figure class="py-4">
+            <img class="w-screen" src="hashiguchi_vrst18.png" alt="hashiguchi_vrst18.png" width="722" height="452">
+            <figcaption class="text-justify pt-2">
+                Extending and shortening a real rod using AR and DR techniques, respectively. a) a physical rod with 6DoF sensor (a Polhemus Fastrak receiver), b) the user with a VST-HMD tracked in 6DoF gazes at the rod and waves the rod at every constant time interval. c) 160% length rod with AR, d) 100% length rod with a texture overlay, and e) 30% length rod with DR.
+            </figcaption>
+        </figure>
+
+        <!--
+            abstract
+        -->
+        <section id="abstract" class="pb-4 text-justify">
+            <p><span class="font-medium">Abstract</span> We can use augmented reality (AR) and diminished reality (DR) in combination, in practice. However, to the best of our knowledge, there is no research on the validation of the cross-modal effects in AR and DR. Our research interest here is to investigate how this continuous visual changes between AR and DR would change our weight sensation of an object. In this paper, we built a system that can continuously extend and reduce the amount of visual entity of real objects using AR and DR renderings to confirm that users can perceive things heavier and lighter than they actually are in the same manner as SWI. Different from the existing research where either AR or DR visual effects were used, we validated one of cross-modal effects in the context of both continuous AR and DR visuo-haptic. Regarding the weight sensation, we found that such cross-modal effect can be approximated with a continuous linear relationship between the weight and length of real objects. Our experimental results suggested that the weight sensation is closely related to the positions of the center of gravity (CoG) and perceived CoG positions lie within the object’s entity under the examined conditions.</p>
+        </section>
+
+        <!--
+            resources
+        -->
+        <section id="bio" class="max-w-4xl mx-auto py-4 space-x-2">
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="https://dl.acm.org/doi/10.1145/3281505.3281545" target="_blank">
+                <i class="ai ai-acmdl ai-lg"></i> ACM DL
+            </a>
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/vrst2018_hashiguchi.pdf" target="_blank">
+                <i class="fa-regular fa-file-pdf"></i> PDF
+            </a>
+        </section>
+
+        <section id="bibtex" class="max-w-4xl mx-auto py-4 space-x-2">
+            <div class="mx-auto bg-gray-800 px-4 rounded-md shadow-lg relative">
+                <div class="flex justify-between items-center py-4 rounded-t-lg">
+                    <span class="text-xs font-semibold text-gray-400">BibTex</span>
+                    <button
+                        id="copyButton"
+                        class="text-xs font-semibold text-gray-400 btn-copy hover:text-gray-200"
+                        data-clipboard-target="#codeBlock"
+                        onclick="copyCodeToClipboard()">📋 Copy</button>
+                </div>
+                <pre class="text-sm text-white overflow-x-auto scrollbar-hide">
+<code id="codeBlock" class="block pb-4">@inproceedings{hashiguchi_vrst18,
+    author = {Hashiguchi, Satoshi and Mori, Shohei and Tanaka, Miho and Shibata, Fumihisa and Kimura, Asako},
+    title = {Perceived Weight of a Rod under Augmented and Diminished Reality Visual Effects},
+    isbn = {9781450360869},
+    doi = {10.1145/3281505.3281545},
+    booktitle = {ACM Symp. on Virtual Reality Software and Technology (VRST)},
+    articleno = {12},
+    numpages = {6},
+    year = {2018}
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-slate-400 text-sm">
+        <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+            <address>
+                <h2><a href="../../" target="_blank">Shohei Mori</a></h2>
+                Plüddemanngasse 106,<br>
+                8042 Graz, Austria<br>
+                Email: <a href="mailto:s.mori.jp@ieee.org">s.mori.jp [at] ieee.org</a>
+            </address>
+            <div class="flex flex-col justify-end">
+                <p class="text-right">Copyright &copy; <span id="year"></span></p>
+                <p class="text-right">All Rights Researved</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

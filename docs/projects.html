@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohei MORI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
+    <script src="js/main.js" defer></script>
+    <link rel="icon" href="img/mixlab.png" type="image/x-icon">
+</head>
+
+<body class="min-h-screen bg-slate-100 dark:bg-slate-950 dark:text-white font-medium text-justify">
+    <header class="dark:text-white sticky top-0 z-10">
+        <section class="bg-slate-500/50 dark:bg-slate-700/50 backdrop-blur-sm max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-medium">
+                <a href="index.html">Shohei MORI</a>
+            </h1>
+            <div>
+                <buttom id="hamburger-button" class="text-2xl md:hidden cursor-pointer relative w-8 h-8">
+                    &#9776;
+                </buttom>
+                <nav class="hidden font-sans md:block space-x-8 text-xl" aria-label="main">
+                    <a href="index.html" class="hover:opacity-90">Top</a>
+                    <a href="projects.html" class="hover:opacity-90">Projects</a>
+                    <a href="publications.html" class="hover:opacity-90">Publications</a>
+                    <a href="https://researchmap.jp/shoheimori" class="hover:opacity-90">日本語</a>
+                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </a>
+                </nav>
+            </div>
+        </section>
+        <section id="mobile-menu" class="fixed hidden inset-0 backdrop-blur-sm justify-end items-start top-4 right-4 text-xl animate-open-menu">
+            <nav class="flex flex-col px-10 py-4 bg-slate-100 dark:bg-slate-900 border border-gray-700 dark:border-white font-medium rounded-xl" aria-label="mobile">
+                <button class="text-2xl flex justify-end hover:opacity-90">
+                    &times;
+                </button>
+                <a href="index.html" class="w-full py-2 -mt-2 hover:opacity-90">Top</a>
+                <a href="projects.html" class="w-full py-2 hover:opacity-90">Projects</a>
+                <a href="publications.html" class="w-full py-2 hover:opacity-90">Publications</a>
+                <hr class="my-3 border-t-2 border-black dark:border-white">
+                <div class="flex justify-between items-center w-full py-2 hover:opacity-90">
+                    <a href="https://researchmap.jp/shoheimori">日本語</a>
+                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <main class="max-w-4xl mx-auto mb-8">
+        <!--
+            projects
+        -->
+        <div id="projects" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Full Projects List
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+
+
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/gsaxner_3dv24.jpg" alt="gsaxner_3dv24.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        DeepDR: Deep Structure-Aware RGB-D Inpainting for Diminished Reality
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        3DV 2024
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/deepdr/" target="_blank">Project Page</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://arxiv.org/abs/2312.00532" target="_blank">arXiv</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/ueda_visapp24.jpg" alt="ueda_visapp24.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Toward Multi-Plane Image Reconstruction from a Casually Captured Focal Stack
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        VISAPP 2024
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/ueda_visapp24/index.html" target="_blank">Project Page</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/ishikawa_tvcg23.jpg" alt="ishikawa_tvcg23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Multi-layer Scene Representation from Composed Focal Stacks
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE ISMAR 2023
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Journal Paper Award
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/fs2mpi/" target="_blank">Project Page</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3320248" target="_blank">Xplore</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/fs2mpi/assets/ishikawa_tvcg23_paper.pdf" target="_blank">PDF</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/6vB_AjgIKkI" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_tvcg23.jpg" alt="mori_tvcg23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Exemplar-Based Inpainting for 6DOF Virtual Reality Photos
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE ISMAR 2023
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Journal Paper Award Nominee
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/msiinpainting/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3320220" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/msiinpainting/assets/mori_tvcg23_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/JFzxFJe015E" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/skreinig_tvcg23.jpg" alt="skreinig_tvcg23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        guitARhero: Interactive Augmented Reality Guitar Tutorials
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE ISMAR 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/guitarhero/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3320266" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/guitarhero/assets/ribeiroskreinig_tvcg23_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/x-Z3dnX8OGI" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/stanescu_ismar23.jpg" alt="stanescu_ismar23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        State-Aware Configuration Detection for Augmented Reality Step-by-Step Tutorials
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE ISMAR 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/stateawareconfigdetection/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/ISMAR59233.2023.00030" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/stateawareconfigdetection/assets/ismar23_stanescu.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.youtube.com/watch?v=W8USXN6jIig" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/kato_miccai23.jpg" alt="kato_miccai23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        High-Quality Virtual Single-Viewpoint Surgical Video: Geometric Autocalibration of Multiple Cameras in Surgical Lights
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        MICCAI 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://github.com/isogawalab/SingleViewSurgicalVideo/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://link.springer.com/chapter/10.1007/978-3-031-43996-4_26" target="_blank">Springer Link</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_jip23.jpg" alt="mori_jip23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Point & Teleport with Orientation Specification, Revisited: Is Natural Turning Always Superior?
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        JIP (2023)
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/mori_jip23/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.2197/ipsjjip.31.392" target="_blank">J-Stage</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/matsumuro_vr23.jpg" alt="matsumuro_vr23.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Modified Egocentric Viewpoint for Softer Seated Experience in Virtual Reality
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE VR 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/matsumuro_tvcg23/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3247056" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/IEEE2023_matsumuro.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/l2Y9_5fGH1Q" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+    
+        <!-- todo -->
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_tvcg22.jpg" alt="mori_tvcg22.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Good Keyframes to Inpaint
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2022), IEEE ISMAR 2022
+                    </div>
+                    <div class="text-rose-700">
+                        🎖️ Invited TVCG paper at IEEE ISMAR 2022
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/goodkfstoinpaint/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2022.3176958" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/goodkfstoinpaint/assets/mori_tvcg22_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/a0JOzRNFnag" target="_blank">Video</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/LTU5NV-Chu4" target="_blank">Talk</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/ebner_vr22.jpg" alt="ebner_vr22.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Video See-Through Mixed Reality with Focus Cues
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2022), IEEE VR 2022
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Journal Paper Award
+                        🎖️ TVCG Session on VR (Invited Talk) at SIGGRAPH 2022
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/gazecontingentvst/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2022.3150504" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/gazecontingentvst/assets/vr22_ebner_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/uAQVrfnlOwo" target="_blank">Video</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/h9rMn6J2zd0" target="_blank">Talk</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/gazecontingentvst/assets/vr22_ebner_slides.pdf" target="_blank">Slides</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_vr22.jpg" alt="mori_vr22.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Exploring Pseudo-Weight in Augmented Reality Extended Displays
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE VR 2022
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/mori_vr22/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/VR51125.2022.00091" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/IEEEVR2022_mori.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/5VCDReGcd40" target="_blank">Video</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.youtube.com/watch?v=DigYL9eHDGQ&t=2444s" target="_blank">Talk</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mandl_ismar21.jpg" alt="mandl_ismar21.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Neural Cameras: Learning Camera Characteristics for Coherent Mixed Reality Rendering
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE ISMAR 2021
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Conference Paper Award
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralcameras/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/ISMAR52148.2021.00068" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralcameras/assets/ismar21_mandl_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.youtube.com/watch?v=kdlRDEuS7Zg" target="_blank">Video</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/u0ZPw12m2GQ?list=PLhPegsM-75z05ZO0u_frike7cy2yZ1GfD&t=2156" target="_blank">Talk</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralcameras/assets/ismar21_mandl_slides.pdf" target="_blank">Slides</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/zollmann_tvcg21.jpg" alt="zollmann_tvcg21.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Visualization Techniques in Augmented Reality: A Taxonomy, Methods and Patterns
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2021)
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2020.2986247" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.hci.otago.ac.nz/papers/ZollmannIEEETVCG2020.pdf" target="_blank">PDF</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_tvcg20.jpg" alt="mori_tvcg20.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        InpaintFusion: Incremental RGB-D Inpainting for 3D Scenes
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2020), IEEE ISMAR 2020
+                    </div>
+                    <div class="text-rose-700">
+                        🎖️ Invited TVCG paper at IEEE ISMAR 2020
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/inpaintfusion/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://ieeexplore.ieee.org/document/9184389" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://arbook.icg.tugraz.at/schmalstieg/Schmalstieg_380.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/pFpIBQTmts4" target="_blank">Video</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/UMu5Lwo7h9A?t=1188" target="_blank">Talk</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/yamaguchi_uist20.jpg" alt="yamaguchi_uist20.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Video-Annotated Augmented Reality Assembly Tutorials
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        ACM UIST 2020
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/videoannotatedtutorials/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://dl.acm.org/doi/abs/10.1145/3379337.3415819" target="_blank">ACM DL</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/videoannotatedtutorials/assets/yamaguchi_uist20_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/m8uUDR8DERY" target="_blank">Video</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/PUtGlPcR9f0" target="_blank">Talk</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mohr_chi20.jpg" alt="mohr_chi20.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Mixed Reality Light Fields for Interactive Remote Assistance
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        ACM CHI 2020
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/mrlightfields/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://dl.acm.org/doi/abs/10.1145/3313831.3376289" target="_blank">ACM DL</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.tugraz.at/fileadmin/user_upload/Institute/ICG/Downloads/team_schmalstieg/peter_mohr/LightFieldRemoteInstructions.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/k77tgEa0LWI" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/kalkofen_kelvar20.jpg" alt="kalkofen_kelvar20.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Tools for Teaching Mining Students in Virtual Reality based on 360° Video Experiences
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE VR Workshop KELVAR 2020
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Paper Award
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/VRW50115.2020.00096" target="_blank">Xplore</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/hashiguchi_vrst18.jpg" alt="hashiguchi_vrst18.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Perceived Weight of a Rod under Augmented and Diminished Reality Visual Effects
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        ACM VRST 2018
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/hashiguchi_vrst18/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://dl.acm.org/doi/10.1145/3281505.3281545" target="_blank">ACM DL</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/vrst2018_hashiguchi.pdf" target="_blank">PDF</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_vr18.jpg" alt="mori_vr18.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        BrightView: Increasing Perceived Brightness of Optical See-Through Head-Mounted Displays Through Unnoticeable Incident Light Reduction
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE VR 2018
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://github.com/Mugichoko445/BrightView" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/VR.2018.8446441" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://github.com/Mugichoko445/BrightView/blob/master/papers/vr2018/brightview-vr2018.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.slideshare.net/ShoheiMori/brightview-at-ieee-vr-2018" target="_blank">Slides</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_cva17.jpg" alt="mori_cva17.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        A Survey of Diminished Reality: Techniques for Visually Concealing, Eliminating, and Seeing Through Real Objects
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IPSJ CVA (2022)
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1186/s41074-017-0028-1" target="_blank">Springer Link</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://ipsjcva.springeropen.com/track/pdf/10.1186/s41074-017-0028-1.pdf" target="_blank">PDF</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/hirata_ismar15.jpg" alt="hirata_ismar15.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        DOMINO (Do Mixed-reality Non-stop) Toppling
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE ISMAR 2015
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Demo Award
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="http://www.rm.is.ritsumei.ac.jp/pdf/ISMAR2015_hirata.pdf" target="_blank">PDF</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_siga11.jpg" alt="mori_siga11.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Enabling On-set Stereoscopic MR-based Previsualization for 3D Filmmaking
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        ACM SIGGRAPH Asia 2011
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/mori_siga11/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1145/2077378.2077396" target="_blank">ACM DL</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/SA2011_mori.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/4_e-EfDGRIU" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+    </main>
+
+    <footer id="footer" class="bg-slate-400 dark:bg-slate-900 dark:text-white text-sm">
+        <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+            <address>
+                <h2><a href="index.html">Shohei Mori</a></h2>
+                Plüddemanngasse 106,<br>
+                8042 Graz, Austria<br>
+                Email: <a href="mailto:s.mori.jp@ieee.org">s.mori.jp [at] ieee.org</a>
+            </address>
+            <div class="flex flex-col justify-end">
+                <p class="text-right">Copyright &copy; <span id="year"></span></p>
+                <p class="text-right">All Rights Researved</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>

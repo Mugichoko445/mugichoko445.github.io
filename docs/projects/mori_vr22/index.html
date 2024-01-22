@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mori et al., IEEE VR 2022</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+	<link rel="stylesheet" href="../../assets/academicons-1.9.4/css/academicons.min.css">
+    <link rel="icon" href="../../img/mixlab.png" type="image/x-icon">
+    <script src="../../js/projects.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 max-w-4xl mx-auto font-thin">
+    <main class="p-4 mx-auto mb-8 font-thin">
+        <!--
+            title
+        -->
+        <h1 class="text-4xl font-bold">
+            Exploring Pseudo-Weight in Augmented Reality Extended Displays ⚖️
+        </h1>
+        <!--
+            authors
+        -->
+        <h2 class="text-lg pt-2 text-gray-600">
+            Shohei Mori<sup>1</sup>, Yuta Kataoka<sup>2</sup>, and Satoshi Hashiguchi<sup>3</sup>
+        </h2>
+        <h2 class="text-lg text-gray-600">
+            <sup>1</sup>Graz University of Technology, <sup>2</sup>Ritsumeikan University, <sup>3</sup>Ryukoku University
+        </h2>
+        <!--
+            venue
+        -->
+        <h2 class="pt-2 text-lg font-mono">
+            IEEE Virtual Reality (VR) 2022
+        </h2>
+
+        <!--
+            teaser
+        -->
+        <figure class="py-4">
+            <img class="w-screen" src="mori_vr22.png" alt="mori_vr22.png" width="1200" height="405">
+            <figcaption class="text-justify pt-2">
+                AR technology enables virtually adding free-form supplemental display areas in the AR space. a) These display areas, or AREDs, are private and more free from weight, size, and materials. Contrary to existing work that discusses the performance of AREDs, we explore how such “weightless” visualization affects our weight sensation. In this study, we found that b) the distance from the device of reference to AREDs and c) the time until it reacts to the physical motion induces a lighter and heavier impression, respectively. We provide quantifications of these two factors, as shown in each figure.
+            </figcaption>
+        </figure>
+
+        <!--
+            abstract
+        -->
+        <section id="abstract" class="pb-4 text-justify">
+            <p><span class="font-medium">Abstract</span> Augmented reality (AR) allows us to wear virtual displays that are registered to our bodies and devices. Such virtually extendable displays, or AR extended displays (AREDs), provide personal display space and are free from physical restrictions. Existing work has explored the new design space to improve user experience and efficiency. Contrary to this direction, we focus on the weight that the user perceives from AREDs, even though they are virtual and have no physical weight. Our user study results show evidence that AREDs can be a source of pseudo-weight, in addition to that of a handheld physical display device. We also systematically evaluate the perceived weight changes depending on the layout and delay in the visualization system. These findings are similar to those in existing pseudo-haptics research. However, we found such behavior in pseudo-weight for a real device and virtual visual stimuli in the air, which differentiates our research from previous work.</p>
+        </section>
+
+        <!--
+            resources
+        -->
+        <section id="bio" class="max-w-4xl mx-auto py-4 space-x-2">
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="https://doi.org/10.1109/VR51125.2022.00091" target="_blank">
+                <i class="ai ai-ieee ai-lg"></i> Xplore
+            </a>
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/IEEEVR2022_mori.pdf" target="_blank">
+                <i class="fa-regular fa-file-pdf"></i> PDF
+            </a>
+            
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="https://youtu.be/5VCDReGcd40" target="_blank">
+                <i class="fa-brands fa-youtube"></i> Video
+            </a>
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="https://www.youtube.com/watch?v=DigYL9eHDGQ&t=2444s" target="_blank">
+                <i class="fa-solid fa-microphone"></i> Talk
+            </a>
+        </section>
+        
+        <section id="bibtex" class="max-w-4xl mx-auto py-4 space-x-2">
+            <div class="mx-auto bg-gray-800 px-4 rounded-md shadow-lg relative">
+                <div class="flex justify-between items-center py-4 rounded-t-lg">
+                    <span class="text-xs font-semibold text-gray-400">BibTex</span>
+                    <button
+                        id="copyButton"
+                        class="text-xs font-semibold text-gray-400 btn-copy hover:text-gray-200"
+                        data-clipboard-target="#codeBlock"
+                        onclick="copyCodeToClipboard()">📋 Copy</button>
+                </div>
+                <pre class="text-sm text-white overflow-x-auto scrollbar-hide">
+<code id="codeBlock" class="block pb-4">@inproceedings{mori_vr22,
+    author={Mori, Shohei and Kataoka, Yuta and Hashiguchi, Satoshi},
+    booktitle={IEEE Conf. on Virtual Reality and 3D User Interfaces (VR)}, 
+    title={Exploring Pseudo-Weight in Augmented Reality Extended Displays}, 
+    year={2022},
+    pages={703--710},
+    doi={10.1109/VR51125.2022.00091}
+}</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-slate-400 text-sm">
+        <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+            <address>
+                <h2><a href="../../" target="_blank">Shohei Mori</a></h2>
+                Plüddemanngasse 106,<br>
+                8042 Graz, Austria<br>
+                Email: <a href="mailto:s.mori.jp@ieee.org">s.mori.jp [at] ieee.org</a>
+            </address>
+            <div class="flex flex-col justify-end">
+                <p class="text-right">Copyright &copy; <span id="year"></span></p>
+                <p class="text-right">All Rights Researved</p>
+            </div>
+        </section>
+    </footer>
+
+    <script>
+        document.getElementById('year').innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        function copyCodeToClipboard() {
+        const copyText = document.getElementById('codeBlock').innerText;
+        const textArea = document.createElement('textarea');
+        textArea.value = copyText;
+        document.body.appendChild(textArea);
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+    
+        const copyButton = document.getElementById('copyButton');
+        copyButton.textContent = '✅ Copied!';
+        setTimeout(function () {
+            copyButton.textContent = '📋 Copy';
+        }, 2000);
+        }
+    </script>
+</body>
+
+</html>

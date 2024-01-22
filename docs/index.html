@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shohei MORI</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
+	<link rel="stylesheet" href="assets/academicons-1.9.4/css/academicons.min.css">
+    <script src="js/main.js" defer></script>
+    <link rel="icon" href="img/mixlab.png" type="image/x-icon">
+</head>
+
+<body class="min-h-screen bg-slate-100 dark:bg-slate-950 dark:text-white font-medium text-justify">
+    <header class="dark:text-white sticky top-0 z-10">
+        <section class="bg-slate-500/50 dark:bg-slate-700/50 backdrop-blur-sm max-w-4xl mx-auto p-4 flex justify-between items-center">
+            <h1 class="text-2xl font-medium">
+                <a href="index.html">Shohei MORI</a>
+            </h1>
+            <div>
+                <buttom id="hamburger-button" class="text-2xl md:hidden cursor-pointer relative w-8 h-8">
+                    &#9776;
+                </buttom>
+                <nav class="hidden font-sans md:block space-x-8 text-xl" aria-label="main">
+                    <a href="index.html" class="hover:opacity-90">Top</a>
+                    <a href="projects.html" class="hover:opacity-90">Projects</a>
+                    <a href="publications.html" class="hover:opacity-90">Publications</a>
+                    <a href="https://researchmap.jp/shoheimori" class="hover:opacity-90">日本語</a>
+                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </a>
+                </nav>
+            </div>
+        </section>
+        <section id="mobile-menu" class="fixed hidden inset-0 backdrop-blur-sm justify-end items-start top-4 right-4 text-xl animate-open-menu">
+            <nav class="flex flex-col px-10 py-4 bg-slate-100 dark:bg-slate-900 border border-gray-700 dark:border-white font-medium rounded-xl" aria-label="mobile">
+                <button class="text-2xl flex justify-end hover:opacity-90">
+                    &times;
+                </button>
+                <a href="index.html" class="w-full py-2 -mt-2 hover:opacity-90">Top</a>
+                <a href="projects.html" class="w-full py-2 hover:opacity-90">Projects</a>
+                <a href="publications.html" class="w-full py-2 hover:opacity-90">Publications</a>
+                <hr class="my-3 border-t-2 border-black dark:border-white">
+                <div class="flex justify-between items-center w-full py-2 hover:opacity-90">
+                    <a href="https://researchmap.jp/shoheimori">日本語</a>
+                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
+                        <i class="fa-solid fa-circle-half-stroke"></i>
+                    </button>
+                </div>
+            </nav>
+        </section>
+    </header>
+
+    <main class="max-w-4xl mx-auto mb-8">
+        <!--
+            portfolio
+        -->
+        <figure class="md:flex pt-8">
+            <img class="w-28 h-28 md:w-36 md:h-36 md:rounded-2xl rounded-full mx-auto md:mx-4" src="assets/img/smori_square.jpg" alt="smori_square.jpg" width="480" height="480">
+            <div class="p-2 text-center md:text-left">
+                <figcaption>
+                    <div class="text-3xl text-sky-500 dark:text-sky-500">
+                        Shohei Mori
+                    </div>
+                    <div class="text-sky-700 dark:text-sky-700">
+                        Mediated Reality Researcher
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        Postdoc @ ICG, TUGraz, Austria & Guest Lecturer (Global) @ Keio Univ., Japan
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500 py-4">
+                        <a href="mailto: s.mori.jp@ieee.org"><i class="fa-solid fa-envelope fa-lg"></i></a> |
+                        <a href="https://scholar.google.com/citations?user=U5lf_WEAAAAJ&hl=en&oi=sra" target="_blank"><i class="ai ai-google-scholar-square ai-lg"></i></a>
+                        <a href="https://orcid.org/0000-0003-0540-7312" target="_blank"><i class="fa-brands fa-orcid fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/shohei-mori-66678818a" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
+                        <a href="https://www.researchgate.net/profile/Shohei-Mori" target="_blank"><i class="fa-brands fa-researchgate fa-lg"></i></a>
+                        <a href="https://github.com/Mugichoko445" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
+                        <a href="https://twitter.com/Mugichoko445" target="_blank"><i class="fab fa-twitter fa-lg"></i></a> |
+                        <a href="assets/pdf/CV_ShoheiMORI.pdf" target="_blank">CV</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+
+        <!--
+            short bio
+        -->
+        <section id="bio" class="max-w-4xl mx-auto p-4 font-thin">
+            <p>Dr. Shohei Mori is a postdoctoral researcher (University Assistant) at the Institute of Computer Graphics and Vision (ICG), Graz University of Technology, Austria, and holds the esteemed position of Guest Lecturer (Global) at Keio University, Japan.</p>
+            <p class="mt-2">His research primarily focused on computational
+                <span class="before:block before:absolute before:-inset-1 before:-skew-y-2 before:bg-sky-700 relative inline-block mx-1">
+                    <span class="relative text-white">Mediated Reality</span>
+                  </span>,
+                a fusion of Augmented Reality and Diminished Reality, with an emphasis on human-centered visual computing. He has been addressing the core vision and graphics problems inherent in Mediated Reality, with applications spanning across education, entertainment, and cinematography.</p>
+            <p class="mt-2">He is a recipient of multiple scientific awards <i class="fa-solid fa-award"></i>. These include the best journal paper awards at IEEE VR 2022 and IEEE ISMAR 2023, the best conference paper award at IEEE ISMAR 2021, the best paper award at IEEE VR Workshop KELVAR, the best demo award at IEEE ISMAR 2016, and the best presentation award at KJMR 2015 and KJMR 2014.</p>
+
+            <!--
+                <p>Dr. Shohei Mori is a postdoctoral researcher (University Assistant) at the Institute of Computer Graphics and Vision (ICG), Graz University of Technology, Austria, and also a Guest Lecturer (Global) at Keio University, Japan.</p>
+            <p class="mt-4">His research interest lies in <i class="fa-solid fa-eye"></i> Vision, <i class="fa-sharp fa-solid fa-cubes"></i> Graphics, <i class="fa-sharp fa-solid fa-camera-retro"></i> Imaging, <i class="fa-solid fa-vr-cardboard"></i> Displays, and <i class="fa-solid fa-brain"></i> Machine Learning that enable Mediated Reality and also understanding <i class="fa-solid fa-person"></i> user perception under the modified vision.
+            He has also been eager to develop Mediated Reality applications for improving <i class="fa-solid fa-house-laptop"></i> remote collaboration, <i class="fa-solid fa-school"></i> education, <i class="fa-solid fa-gamepad"></i> entertainment, and <i class="fa-solid fa-clapperboard"></i> filmmaking.
+            He won multiple scientific awards, including the best journal paper awards (IEEE VR 2022, IEEE ISMAR 2023), the best conference paper award (IEEE ISMAR 2021), the best paper award (IEEE VR Workshop KELVAR), the best demo award (IEEE ISMAR 2016), and the best presentation award (KJMR 2015, KJMR 2014).</p>
+            -->
+        </section>
+
+        <!--
+            recent projects
+        -->
+        <div id="projects" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Recent Projects
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+
+        <section class="max-w-4xl mx-auto p-4 font-thin md:text-start text-center">
+            <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects.html">Full Project List</a>
+            <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="publications.html">Full Publication List</a>
+        </section>
+
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/gsaxner_3dv24.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        DeepDR: Deep Structure-Aware RGB-D Inpainting for Diminished Reality
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        3DV 2024
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/deepdr/" target="_blank">Project Page</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://arxiv.org/abs/2312.00532" target="_blank">arXiv</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/ueda_visapp24.jpg" alt="ueda_visapp24.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Toward Multi-Plane Image Reconstruction from a Casually Captured Focal Stack
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        VISAPP 2024
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/ueda_visapp24/index.html" target="_blank">Project Page</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/ishikawa_tvcg23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Multi-layer Scene Representation from Composed Focal Stacks
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE ISMAR 2023
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Journal Paper Award
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/fs2mpi/" target="_blank">Project Page</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3320248" target="_blank">Xplore</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/fs2mpi/assets/ishikawa_tvcg23_paper.pdf" target="_blank">PDF</a>
+						<a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/6vB_AjgIKkI" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_tvcg23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Exemplar-Based Inpainting for 6DOF Virtual Reality Photos
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE ISMAR 2023
+                    </div>
+                    <div class="text-rose-700">
+                        🏆 Best Journal Paper Award Nominee
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/msiinpainting/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3320220" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/msiinpainting/assets/mori_tvcg23_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/JFzxFJe015E" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/skreinig_tvcg23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        guitARhero: Interactive Augmented Reality Guitar Tutorials
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE ISMAR 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/guitarhero/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3320266" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/guitarhero/assets/ribeiroskreinig_tvcg23_paper.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/x-Z3dnX8OGI" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/stanescu_ismar23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        State-Aware Configuration Detection for Augmented Reality Step-by-Step Tutorials
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE ISMAR 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/stateawareconfigdetection/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/ISMAR59233.2023.00030" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/stateawareconfigdetection/assets/ismar23_stanescu.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://www.youtube.com/watch?v=W8USXN6jIig" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/kato_miccai23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        High-Quality Virtual Single-Viewpoint Surgical Video: Geometric Autocalibration of Multiple Cameras in Surgical Lights
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        MICCAI 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://github.com/isogawalab/SingleViewSurgicalVideo/" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://link.springer.com/chapter/10.1007/978-3-031-43996-4_26" target="_blank">Springer Link</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/mori_jip23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Point & Teleport with Orientation Specification, Revisited: Is Natural Turning Always Superior?
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        JIP (2023)
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/mori_jip23/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.2197/ipsjjip.31.392" target="_blank">J-Stage</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+        <figure class="sm:flex pt-4">
+            <img class="w-36 h-36 rounded-2xl mx-auto sm:mx-4" src="assets/img/projects/matsumuro_vr23.jpg" alt="smori_square.jpg" width="256" height="256">
+            <div class="pt-6 sm:p-2 p-2 text-center sm:text-left">
+                <figcaption>
+                    <div class="text-xl">
+                        Modified Egocentric Viewpoint for Softer Seated Experience in Virtual Reality
+                    </div>
+                    <div class="text-slate-700 dark:text-slate-500">
+                        IEEE TVCG (2023), IEEE VR 2023
+                    </div>
+                    <div class="dark:text-white pt-4">
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="projects/matsumuro_tvcg23/index.html" target="_blank">Project Page</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2023.3247056" target="_blank">Xplore</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/IEEE2023_matsumuro.pdf" target="_blank">PDF</a>
+                        <a class="border border-black dark:border-white rounded-md font-thin px-1 py-0.5 hover:opacity-90" href="https://youtu.be/l2Y9_5fGH1Q" target="_blank">Video</a>
+                    </div>
+                </figcaption>
+            </div>
+        </figure>
+        
+
+        <!--
+            collaborators
+        -->
+        <div id="collaborators" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Collaborators
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+
+        <section class="max-w-4xl mx-auto px-4 font-thin">
+            <p class="pb-6 text-center md:text-left">I have achieved scientific milestones, including publications and grant acquisitions, with the following collaborators.</p>
+
+            <div class="flex flex-col sm:flex-row space-x-2 text-left">
+                <div class="w-full sm:w-1/2">
+                    <h2 class="text-xl pb-6">🧑‍🔬 Academia</h2>
+                    <ul class="list-disc pl-5">
+                        <li><span class="font-medium">Keio University</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">Ritsumeikan University</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">Nara Institute of Science and Technology (NAIST)</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">Ryukoku University</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">Fachhochschule Salzburg (FH Salzburg)</span><span class="text-slate-700 dark:text-slate-500">, Austria</span></li>
+                        <li><span class="font-medium">Montanuniversität Leoben</span><span class="text-slate-700 dark:text-slate-500">, Austria</span></li>
+                        <li><span class="font-medium">University of Otago</span><span class="text-slate-700 dark:text-slate-500">, New Zealand</span></li>
+                        <li><span class="font-medium">University of Stuttgart</span><span class="text-slate-700 dark:text-slate-500">, Germany</span></li>
+                        <li><span class="font-medium">Technical University of Munich (TUM)</span><span class="text-slate-700 dark:text-slate-500">, Germany</span></li>
+                        <li><span class="font-medium">Stanford University</span><span class="text-slate-700 dark:text-slate-500">, USA</span></li>
+                        <li><span class="font-medium">University of Hong Kong</span><span class="text-slate-700 dark:text-slate-500">, China</span></li>
+                    </ul>
+                </div>
+                <div class="w-full sm:w-1/2">
+                    <h2 class="text-xl py-6 sm:pb-6 sm:pt-0">👩‍💼 Industry</h2>
+                    <ul class="list-disc pl-5">
+                        <li><span class="font-medium">AVL List GmbH</span><span class="text-slate-700 dark:text-slate-500">, Austria</span></li>
+                        <li><span class="font-medium">NEC Corporation</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">NTT Laboratories</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">National Institute of Advanced Industrial Science and Technology (AIST)</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                        <li><span class="font-medium">Visco Technologies Corporation</span><span class="text-slate-700 dark:text-slate-500">, Japan</span></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!--
+            honors
+        -->
+        <div id="honors" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Honors
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+
+        <section class="max-w-4xl mx-auto px-4 font-thin">
+            <h2 class="text-xl pb-6 text-center md:text-left">🏆 Awards</h2>
+            <ul class="list-disc pl-5">
+                <li><span class="font-medium">Best Journal Paper Award</span> <span class="text-slate-700 dark:text-slate-500">IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) 2023, Multi-layer Scene Representation from Composed Focal Stacks</span></li>
+                <li><span class="font-medium">Best Journal Paper Award Nominee</span> <span class="text-slate-700 dark:text-slate-500">IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) 2023, Exemplar-Based Inpainting for 6DOF Virtual Reality Photos</span>
+                <li><span class="font-medium">Best Journal Paper Award</span> <span class="text-slate-700 dark:text-slate-500">IEEE Virtual Reality (VR) 2022, Video See-Through Mixed Reality with Focus Cues</span>
+                <li><span class="font-medium">Best Journal Paper Award</span> <span class="text-slate-700 dark:text-slate-500">The Institute of Image Electronics Engineers of Japan (IIEEJ) 2022, Visual Odometry Adjusted to the Scale of a Global Map (in Japanese)</span>
+                <li><span class="font-medium">Best Paper Award</span> <span class="text-slate-700 dark:text-slate-500">Japan Society of Computer Aided Surgery (JSCAS) 2022, 3D Structure Estimation of the Surgical Field from Multi-view Video ―Towards the Free-viewpoint Visualization of Open Surgery― (in Japanese)</span>
+                <li><span class="font-medium">Best Conference Paper Award</span> <span class="text-slate-700 dark:text-slate-500">IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) 2021, Neural Cameras: Learning Camera Characteristics for Coherent Mixed Reality Rendering</span>
+                <li><span class="font-medium">Best Paper Award</span> <span class="text-slate-700 dark:text-slate-500">IEEE Virtual Reality Workshop on K-12+ Embodied Learning through Virtual & Augmented Reality (KELVAR) 2020, Tools for Teaching Mining Students in Virtual Reality based on 360° Video Experiences</span>
+                <li><span class="font-medium">Best Reading Group</span> <span class="text-slate-700 dark:text-slate-500">Int. Computer Vision Summer School (ICVSS) 2016</span>
+                <li><span class="font-medium">Best Demo Award</span> <span class="text-slate-700 dark:text-slate-500">IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) 2015, DOMINO (Do Mixed-reality Non-stop) Toppling</span>
+                <li><span class="font-medium">Best Presentation Award</span> <span class="text-slate-700 dark:text-slate-500">Korea Japan Workshop on Mixed Reality (KJMR) 2015, An AR/MR Camera Tracker Using View Dependent Texture Mapping</span>
+                <li><span class="font-medium">Best Presentation Award</span> <span class="text-slate-700 dark:text-slate-500">Korea Japan Workshop on Mixed Reality (KJMR) 2014, Building a Data Acquisition Studio for Diminished Reality Research</span>
+                <li><span class="font-medium">Dean Education Award</span> <span class="text-slate-700 dark:text-slate-500">Parents Association of Student Education Assistance of Ritsumeikan University (PASEAR), 2009, For the top three high achievers</span>
+                <li><span class="font-medium">Education Award</span> <span class="text-slate-700 dark:text-slate-500">Parents Association of Student Education Assistance of Ritsumeikan University (PASEAR), 2008</span>
+                <li><span class="font-medium">Award for Excellence</span> <span class="text-slate-700 dark:text-slate-500">Parents Association of Student Education Assistance of Ritsumeikan University (PASEAR), 2007</span>
+            </ul>
+            <h2 class="text-xl py-6 text-center md:text-left">🎓 Scholarships</h2>
+            <ul class="list-disc pl-5">
+                <li><span class="font-medium">Saionji Graduate School Encouragement Scholarship</span> <span class="text-slate-700 dark:text-slate-500">Ritsumeikan University, 2011, For the top graduate</span></li>
+                <li><span class="font-medium">Saionji Ikuei Scholarship</span> <span class="text-slate-700 dark:text-slate-500">Ritsumeikan University, 2010, For the top three high achievers</span></li>
+                <li><span class="font-medium">Saionji Ikuei Scholarship</span> <span class="text-slate-700 dark:text-slate-500">Ritsumeikan University, 2009, For the top three high achievers</span></li>
+                <li><span class="font-medium">Saionji Ikuei Scholarship</span> <span class="text-slate-700 dark:text-slate-500">Ritsumeikan University, 2008, For the top three high achievers</span></li>
+            </ul>
+        </section>
+        
+
+
+        <!--
+            grants
+        -->
+        <div id="grants" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Grants
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+        
+        <section class="max-w-4xl mx-auto px-4 font-thin">
+            <ul class="list-disc pl-5">
+                <li><a class="font-medium" href="https://graz.pure.elsevier.com/en/projects/fwf-3ddr-real-time-three-dimensional-diminished-reality" target="_blank">3DDR - Real-time Three-Dimensional Diminished Reality</a> <span class="text-slate-700 dark:text-slate-500">Fonds zur Förderung der wissenschaftlichen Forschung (FWF), P33634, Co-Investigator (Jan. 2021 - Dec. 2024)</span></li>
+                <li><a class="font-medium">Proof-of-Concept zur für Modifikation von Sensordaten</a> <span class="text-slate-700 dark:text-slate-500">AVL List GmbH, Expert Researcher (Apr. 2023 - Oct. 2023)</span></li>
+                <li><a class="font-medium" href="http://www.ritsumei.ac.jp/rgiro/activity/program/fourth/projects/hayashi.html/" target="_blank">An Interdisciplinary Research Center on Supporting Cognitive and Communication for Elderly</a> <span class="text-slate-700 dark:text-slate-500">Ritsumeikan Global Innovation Research Organization (R-GIRO), Project Member (Apr. 2021 - Mar. 2026)</span></li>
+                <li><a class="font-medium" href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-17K12729/" target="_blank">Perceptually High Contrast Optical See-Through HMD based on Adaptation (in Japanese)</a> <span class="text-slate-700 dark:text-slate-500">Grant-in-Aid for Young Scientists (B), 17K12729, Principal Investigator (Apr. 2017 - Sept. 2018)</span></li>
+                <li><a class="font-medium" href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-16J05114/" target="_blank">Research on Mixed and Augmented Reality Using Light Field Cameras (in Japanese)</a> <span class="text-slate-700 dark:text-slate-500">Grant-in-Aid for JSPS Fellows (PD), 16J05114, Research Fellow (Apr. 2016 - Sept. 2018)</span></li>
+                <li><a class="font-medium" href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-13J09193/" target="_blank">Two Approaches for Improving the Expressiveness of Mixed Reality Space (in Japanese)</a> <span class="text-slate-700 dark:text-slate-500">Grant-in-Aid for JSPS Fellows (DC-1), 13J09193, Research Fellow (Apr. 2013 - Mar. 2016)</span></li>
+                <li><a class="font-medium" href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-24220004/" target="_blank">Systematizing and Consolidating a Technological Basis of Mixed and Diminished Reality Space</a> <span class="text-slate-700 dark:text-slate-500">Grant-in-Aid for Scientific Research (S), 24220004, Research Collaborator (May 2012 - Mar. 2017)</span></li>
+            </ul>
+        </section>
+
+        
+
+        <!--
+            teaching
+        -->
+        <div id="teaching" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Teaching
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+
+        <section class="max-w-4xl mx-auto px-4 font-thin">
+            <h2 class="text-xl pb-6 text-center md:text-left">Guest Lecturer</h2>
+            <ul class="list-disc pl-5">
+                <li><span class="font-medium">Realtime Visualisation (FHSalzburg)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        in collaboration with Markus Tatzgern (WS2020, WS2021, WS2022, WS2023) - Gave lectures on image-based rendering and its application. Provided assignment design and implementation on light field reparameterization and AR-based light field capturing. Student presentation management.
+                    </span>
+                </li>
+                <li><span class="font-medium">Augmented Reality (TUGraz)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        in collaboration with Denis Kalkofen and Peter Roth (WS2018, WS2019) / with Denis Kalkofen (WS2021) / with Alexander Plopski (WS2022, WS2023) - Gave lectures on visual tracking, camera calibration, image-based rendering, and diminished reality.
+                    </span>
+                </li>
+                <li><span class="font-medium">Virtual Reality (TUGraz)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        in collaboration with Dieter Schmalstieg (SS2022) / with Clemens Arth (SS2023) - Gave a lecture on image-based rendering. Provided assignment design and implementation on image-based rendering using multi-sphere images.
+                    </span>
+                </li>
+                <li><span class="font-medium">Biomedical Visualization / AK Computergraphics (TUGraz)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        in collaboration with Denis Kalkofen (WS2022, WS2023) - Gave a lecture on light field theory, imaging, and microscopy application.
+                    </span>
+                </li>
+                <li><span class="font-medium">Research Seminar - Virtual Reality (TUGraz)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        Management of weekly students' research presentations.
+                    </span>
+                </li>
+                <li><span class="font-medium">Scientific Writing (TUGraz)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        in collaboration with Peter Mohr (WS2022) - Provided topics, no which students research and describe.
+                    </span></li>
+                <li><span class="font-medium">Information Engineering Special Lecture Series (Keio Univ.)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        (25.11.2022) - Gave an invited lecture on "What we can/cannot see through today's mixed reality."
+                    </span>
+                </li>
+                <li><span class="font-medium">Visual Informatics Lecture Series (Osaka Electro-Communication Univ.)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        by Maki Sugimoto at Keio Univ. (6.3.2023) - Gave an invited lecture on "Why is "place CG there" in AR still challenging."
+                    </span>
+                </li>
+            </ul>
+            <h2 class="text-xl py-6 text-center md:text-left">Teaching Assistant</h2>
+            <ul class="list-disc pl-5">
+                <li><span class="font-medium">Experiments in Media Technology - Virtual/Mixed Reality (Ritsumeikan Univ.)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">
+                        (2011, 2012) - Group work supports and assignment evaluations.
+                    </span>
+                </li>
+            </ul>
+            <h2 class="text-xl py-6 text-center md:text-left">Invited Lab Talks</h2>
+            <ul class="list-disc pl-5">
+                <li>
+                    <span class="font-medium">Mediated Reality: 3D Real-World Augmentation and Beyond (FH Salzburg)</span>,
+                    <span class="text-slate-700 dark:text-slate-500"> organized by Markus Tatzgern (30.11.2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Through the Looking Glass of Mediated Reality (NAIST)</span>,
+                    <span class="text-slate-700 dark:text-slate-500"> organized by Hideaki Uchiyama (22.11.2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Lenses to See the World and Us in Mediated Reality (University of Stuttgart)</span>,
+                    <span class="text-slate-700 dark:text-slate-500"> organized by Dieter Schmalstieg (28.10.2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Towards Editable World and Understanding It (Osaka University)</span>,
+                    <span class="text-slate-700 dark:text-slate-500"> organized by Daisuke Iwai (8.3.2023)</span>
+                </li>
+            </ul>
+        </section>
+        
+        
+
+        <!--
+            service
+        -->
+        <div id="service" class="flex items-center px-4 py-12">
+            <div class="flex-grow h-px bg-gray-400 md:hidden"></div>
+            <span class="flex-shrink text-2xl font-light md:pr-4 md:pl-0 px-4 italic">
+                Services
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+        
+        <section class="max-w-4xl mx-auto px-4 font-thin">
+            <h2 class="text-xl pb-6 text-center md:text-left">Working Member</h2>
+            <ul class="list-disc pl-5">
+                <li>
+                    <a class="font-medium" href="https://www.ipsj.or.jp/english/" target="_blank">Information Processing Society of Japan</a>,
+                    <a class="font-medium" href="https://www.ipsj.or.jp/annai/committee/info-WP/" target="_blank">Info-WorkPlace</a>,
+                    <span class="text-slate-700 dark:text-slate-500">Specially Appointed Member (2023 - 2025)</span>
+                </li>
+                <li>
+                    <a class="font-medium" href="https://vrsj.org/english/about/" target="_blank">Virtual Reality Society of Japan</a>,
+                    <span class="text-slate-700 dark:text-slate-500">Academic Journal Committee (2020 - 2024), Newsletter Committee (2016 - 2020)</span>
+                </li>
+                <li>
+                    <a class="font-medium" href="http://www.hvrl.ics.keio.ac.jp/pots/index_eng.html" target="_blank">Technical Committee on Plenoptic Time-Space Technology</a>,
+                    <span class="text-slate-700 dark:text-slate-500">Secretary (2016 - 2019)</span>
+                </li>
+                <li>
+                    <a class="font-medium" href="https://www.iso.org/committee/45252.html" target="_blank">ISO/IEC JTC 1/SC 24/WG 9 (Augmented reality continu-um concepts and reference model)</a>,
+                    <span class="text-slate-700 dark:text-slate-500">Support Member (2016 - 2019)</span>
+                </li>
+                <li>
+                    <a class="font-medium">TrakMark (Benchmark test schemes for AR/MR geometric registration and tracking methods)</a>,
+                    <span class="text-slate-700 dark:text-slate-500">Support Member (2015, 2016)</span>
+                </li>
+            </ul>
+            
+            <h2 class="text-xl py-6 text-center md:text-left">Committee</h2>
+            <ul class="list-disc pl-5">
+                <li>
+                    <span class="font-medium">IEEE Virtual Reality (VR)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">IPC Member
+                        (<a href="https://ieeevr.org/2019/committees/program.html" target="_blank">2019</a>,
+                        <a href="https://ieeevr.org/2020/committees/program.html" target="_blank">2020</a>,
+                        <a href="https://ieeevr.org/2021/committees/program-committee/" target="_blank">2021</a>,
+                        <a href="https://ieeevr.org/2022/committees/program-committee/" target="_blank">2022</a>,
+                        <a href="https://ieeevr.org/2023/committees/program-committee/" target="_blank">2023</a>,
+                        <a href="https://ieeevr.org/2024/committees/program-committee/" target="_blank">2024</a>),
+                        Super-Committee Member (<a href="https://ieeevr.org/2024/committees/program-committee/" target="_blank">2024</a>),
+                        Web Co-Chair (<a href="https://ieeevr.org/2019/committees/conference.html" target="_blank">2019</a>)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">IPC Member
+                        (<a href="https://ismar2020.ismar.net/scitech-committee/index.html" target="_blank">2020</a>,
+                        <a href="https://ismar21.org/science-and-technology-program-committee/" target="_blank">2021</a>,
+                        <a href="https://ismar2022.org/ismar-st-program-committee/" target="_blank">2022</a>,
+                        <a href="https://ismar23.org/ismar-st-program-committee/" target="_blank">2023</a>),
+                        Doctoral Consortium Co-Chair
+                        (<a href="https://ismar2020.ismar.net/committees/index.html" target="_blank">2020</a>,
+                        <a href="https://ismar23.org/ismar-conference-committee/" target="_blank">2023</a>),
+                        Demo Co-Chair (<a href="https://ismar2018.vgtc.org/committee_conference/index.html" target="_blank">2018</a>),
+                        Session Chair (<a href="https://ismar2020.org/program/" target="_blank">2020</a>,
+                        <a href="https://ismar21.org/program/accepted-papers/#session7" target="_blank">2021</a>)
+                    </span>
+                </li>
+                <li>
+                    <span class="font-medium">Frontiers in Computer Science, Computer Graphics and Visualization</span>,
+                    <span class="text-slate-700 dark:text-slate-500"><a href="https://www.frontiersin.org/journals/computer-science/sections/computer-graphics-and-visualization#editorial-board" target="_blank">Review Editor (2021 -)</a></span>
+                </li>
+                <li>
+                    <span class="font-medium">Int. ACM Conf. on 3D Web Technology (Web3D)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">IPC Member (<a href="https://web3d.siggraph.org/archive/web3d2020/conference/" target="_blank">2020</a>)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Int. Conf. on Artificial Reality and Telexistence & Eurographics Symposium on Virtual Environments (ICAT-EGVE)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">IPC Member (<a href="http://icat.vrsj.org/2017/" target="_blank">2017</a>)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Highly Diverse Cameras and Displays for Mixed and Augmented Reality (HDCD4MAR)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">General Co-Chair (<a href="http://www.hvrl.ics.keio.ac.jp/hdcd4mar/" target="_blank">2017</a>)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Int. Workshop on Diminished Reality as Challenging Issue in Mixed and Augmented Reality</span>,
+                    <span class="text-slate-700 dark:text-slate-500">Workshop Organizing Chair (<a href="http://www.rm.is.ritsumei.ac.jp/IWDR2016/" target="_blank">2016</a>)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Annual Conf. of the Virtual Reality Society of Japan (in Japanese)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">Publication Co-Chair (<a href="http://conference.vrsj.org/ac2017/committee/committee.html" target="_blank">2017</a>)</span>
+                </li>
+                <li>
+                    <span class="font-medium">PoTS Symposium (in Japanese)</span>,
+                    <span class="text-slate-700 dark:text-slate-500">Local Chair (<a href="http://www.hvrl.ics.keio.ac.jp/pots/symp/2016/" target="_blank">2017</a>)</span>
+                </li>
+            </ul>
+
+            
+            <h2 class="text-xl py-6 text-center md:text-left">Peer-reviews (Journal)</h2>
+            <ul class="list-disc pl-5">
+                <li>
+                    <span class="font-medium">IEEE Trans. on Visualization and Computer Graphics (TVCG)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2018, 2020, 2021, 2022, 2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Trans. on Multimedia</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2016, 2021, 2022)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Computer Graphics and Applications (CG&A)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2020)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Trans. on Image Processing (TIP)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2023, 2024)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Trans. on Instrumentation and Measurement (TIM)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2020)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Springer Virtual Reality (VR)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Frontiers in Virtual Reality</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2021)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IPSJ Trans. on Computer Vision and Applications (CVA)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2017, 2019)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEICE Trans. on Information and Systems</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2017, 2018)</span>
+                </li>
+                <li>
+                    <span class="font-medium">ITE Trans. on Media Technology and Applications (MTA)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2015)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Molecular Diversity Preservation International (MDPI)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2017)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Concurrency and Computation: Practice and Experience (CCPE)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2021)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Trans. of the Virtual Reality Society of Japan (VRSJ) (in English and Japanese)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2016, 2017, 2021, 2022)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Multimedia Tools and Applications (MTA)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Indonesian Journal of Electrical Engineering and Computer Science (IJEECS)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2023)</span>
+                </li>
+            </ul>
+            
+            <h2 class="text-xl py-6 text-center md:text-left">Peer-reviews (Conference)</h2>
+            <ul class="list-disc pl-5">
+                <li>
+                    <span class="font-medium">IEEE Virtual Reality (VR)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2018, 2019, 2020, 2021, 2022, 2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2017, 2018, 2019, 2020, 2021, 2022, 2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">ACM CHI Conf. on Human Factors in Computing Systems (CHI)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2020, 2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">ACM Symp. on Virtual Reality Software and Technology (VRST)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2019)</span>
+                </li>
+                <li>
+                    <span class="font-medium">ACM Special Interest Group on Computer Graphics and Interactive Techniques (SIGGRAPH) Asia</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE Information Visualization (InfoVis)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2020)</span>
+                </li>
+                <li>
+                    <span class="font-medium">IEEE/RSJ Int. Conf. on Intelligent Robots and Systems (IROS)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2023)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Augmented Human (AH)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2019)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Int. Conf. on Artificial Reality and Telexistence & Eurographics Symposium on Virtual Environment (ICAT-EGVE)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2017, 2019), Posters/Demos (2022)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Int. ACM Conf. on 3D Web Technology</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2020)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Asia Pasific Workshop on Mixed and Augmented Reality (APMAR)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2018, 2019)</span>
+                </li>
+                <li>
+                    <span class="font-medium">Int. Workshop on Diminished Reality as Challenging Issue in Mixed and Augmented Reality (IWDR)</span>
+                    <span class="text-slate-700 dark:text-slate-500">(2016)</span>
+                </li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="bg-slate-400 dark:bg-slate-900 dark:text-white text-sm">
+        <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+            <address>
+                <h2><a href="index.html">Shohei Mori</a></h2>
+                Plüddemanngasse 106,<br>
+                8042 Graz, Austria<br>
+                Email: <a href="mailto:s.mori.jp@ieee.org">s.mori.jp [at] ieee.org</a>
+            </address>
+            <div class="flex flex-col justify-end">
+                <p class="text-right">Copyright &copy; <span id="year"></span></p>
+                <p class="text-right">All Rights Researved</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
