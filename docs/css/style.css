@@ -1013,10 +1013,6 @@ video {
   padding-top: 2rem;
 }
 
-.pt-12 {
-  padding-top: 3rem;
-}
-
 .pt-0 {
   padding-top: 0px;
 }
@@ -1308,10 +1304,6 @@ video {
     margin-right: 1rem;
   }
 
-  .sm\:mt-0 {
-    margin-top: 0px;
-  }
-
   .sm\:flex {
     display: flex;
   }
@@ -1326,14 +1318,6 @@ video {
 
   .sm\:p-2 {
     padding: 0.5rem;
-  }
-
-  .sm\:p-6 {
-    padding: 1.5rem;
-  }
-
-  .sm\:p-0 {
-    padding: 0px;
   }
 
   .sm\:px-2 {
