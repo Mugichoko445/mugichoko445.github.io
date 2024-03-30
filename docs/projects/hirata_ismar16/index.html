@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hirata et al., IEEE ISMAR 2015</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="icon" href="../../assets/img/mixlab.png" type="image/x-icon">
+    <script src="../../js/projects.js" defer></script>
+</head>
+
+<body class="min-h-screen bg-slate-100 max-w-4xl mx-auto font-thin">
+    <main class="p-4 mx-auto mb-8 font-thin">
+        <!--
+            title
+        -->
+        <h1 class="text-4xl font-bold">
+            DOMINO (Do Mixed-reality Non-stop) Toppling 🎢
+        </h1>
+        <!--
+            authors
+        -->
+        <h2 class="text-lg pt-2 text-gray-600">
+            Ryotaro Hirata, Tomoka Ishibashi, Jianing Qie, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura
+        </h2>
+        <h2 class="text-lg text-gray-600">
+            Ritsumeikan University
+        </h2>
+        <!--
+            venue
+        -->
+        <h2 class="pt-2 text-lg font-mono">
+            IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) 2015
+        </h2>
+        
+        <!--
+            remarks
+        -->
+        <h2 class="text-lg font-mono">
+            🎖️ Best Demo Award
+        </h2>
+
+        <!--
+            teaser
+        -->
+        <figure class="py-4">
+            <img class="w-screen" src="hirata_ismar2015_1.png" alt="hirata_ismar2015_1.png" width="1200" height="354">
+            <figcaption class="text-justify pt-2 text-sm">
+                DOMINO toppling system. (Left) Real-virtual and virtual-real transitions. (Middle) Dominos toppling continues even in the air. (Right) Revealing the mechanical "tricks" at the venue.
+            </figcaption>
+        </figure>
+
+        <!--
+            abstract
+        -->
+        <section id="abstract" class="pb-4 text-justify">
+            <p><span class="font-medium">Abstract</span> We propose an MR “domino toppling” attraction as a case study of MR systems, focusing on the Real–Virtual (R–V) and Virtual– Real (V–R) continuum. In this attraction, the user experiences that real and virtual domino blocks seamlessly pushes each other through a video-seethrough head-mounted display. Therefore, the user may believe that attractive MR effects happen in the real space. To achieve the seamless R–V/V–R transitions, we implemented simple switching devices. In addition, we use diminished reality techniques to visually remove the devices to make it harder for the user to distinguish R–V/V–R transitions.</p>
+        </section>
+
+        <!--
+            resources
+        -->
+        <section id="bio" class="max-w-4xl mx-auto py-4 space-x-2">
+            <a class="bg-gray-800 text-white rounded-full px-3 py-2 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/ISMAR2015_hirata.pdf" target="_blank">
+                <i class="fa-regular fa-file-pdf"></i> PDF
+            </a>
+        </section>
+        
+        <!--
+            images
+        -->
+        <div id="mechanical tricks" class="flex items-center px-4 py-6">
+            <div class="flex-grow h-px bg-gray-400"></div>
+            <span class="flex-shrink text-xl font-light px-4 italic">
+                Mechanical Tricks
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+        <figure class="py-4">
+            <img class="w-screen" src="hirata_ismar2015_2.png" alt="hirata_ismar2015_2.png" width="1200" height="354">
+            <figcaption class="text-justify pt-2 text-sm">
+                Mechanical tricks in our DOMINO toppling system. (Left) The tacktile switch activates the first virtual domino. (Middle) The solenoid actuator pushes the real domino. (Right) R–V and V–R transitions in action.
+            </figcaption>
+        </figure>
+
+        
+        <div id="rendering" class="flex items-center px-4 py-6">
+            <div class="flex-grow h-px bg-gray-400"></div>
+            <span class="flex-shrink text-xl font-light px-4 italic">
+                Rendering
+            </span>
+            <div class="flex-grow h-px bg-gray-400"></div>
+        </div>
+        <figure class="py-4">
+            <img class="w-screen" src="hirata_ismar2015_3.png" alt="hirata_ismar2015_3.png" width="1200" height="354">
+            <figcaption class="text-justify pt-2 text-sm">
+                Matching the appearance of virtual dominoes with real ones. (Left) Manually adjusting illumination and blurriness to ensure a seamless match. (Right) The course is designed in advance and scaled to align with the metric. 
+            </figcaption>
+        </figure>
+
+
+        <!--
+            citation
+        -->
+        <section id="bibtex" class="max-w-4xl mx-auto py-4 space-x-2">
+            <div class="mx-auto bg-gray-800 px-4 rounded-md shadow-lg relative">
+                <div class="flex justify-between items-center py-4 rounded-t-lg">
+                    <span class="text-xs font-semibold text-gray-400">BibTex</span>
+                    <button
+                        id="copyButton"
+                        class="text-xs font-semibold text-gray-400 btn-copy hover:text-gray-200"
+                        data-clipboard-target="#codeBlock"
+                        onclick="copyCodeToClipboard()">📋 Copy</button>
+                </div>
+                <pre class="text-sm text-white overflow-x-auto scrollbar-hide">
+<code id="codeBlock" class="block pb-4">@misc{hirata_ismar2015,
+    author = {Hirata, Ryotaro and Ishibashi, Tomoka and Qie, Jianing and Mori, Shohei and Shibata, Fumihisa and Kimura, Asako and Tamura, Hideyuki},
+    title = {DOMINO (Do Mixed-reality Non-stop) Toppling},
+    howpublished = {IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) 2015 Demos},    
+    year = {2015}
+}
+
+@article{hirata_tvrsj2016,
+    title={DOMINO Toppling: An MR Attraction Focusing on R-V Continuum},
+    author = {Hirata, Ryotaro and Ishibashi, Tomoka and Qie, Jianing and Mori, Shohei and Ikeda, Sei and Shibata, Fumihisa and Kimura, Asako and Tamura, Hideyuki},
+    journal={Trans. of the Virtual Reality Society of Japan (TVRSJ)},
+    volume={21},
+    number={3},
+    pages={463--472},
+    year={2016},
+    doi={10.18974/tvrsj.21.3_463},
+    note={In Japanese}
+  }
+</code></pre>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="bg-slate-400 text-sm">
+        <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between">
+            <address>
+                <h2><a href="../../" target="_blank">Shohei Mori</a></h2>
+                Plüddemanngasse 106,<br>
+                8042 Graz, Austria<br>
+                Email: <a href="mailto:s.mori.jp@ieee.org">s.mori.jp [at] ieee.org</a>
+            </address>
+            <div class="flex flex-col justify-end">
+                <p class="text-right">Copyright &copy; <span id="year"></span></p>
+                <p class="text-right">All Rights Researved</p>
+            </div>
+        </section>
+    </footer>
+</body>
+
+</html>
