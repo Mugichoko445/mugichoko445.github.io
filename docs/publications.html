@@ -11,8 +11,11 @@
 </head>
 
 <body class="min-h-screen bg-slate-100 dark:bg-slate-950 dark:text-white font-medium text-justify">
+    <!--
+        navbar
+    -->
     <header class="dark:text-white sticky top-0 z-10">
-        <section class="bg-slate-500/50 dark:bg-slate-700/50 backdrop-blur-sm max-w-4xl mx-auto p-4 flex justify-between items-center">
+        <section class="bg-slate-500/50 dark:bg-slate-700/50 backdrop-blur-sm max-w-4xl mx-auto p-4 flex justify-between items-center rounded-b-2xl">
             <h1 class="text-2xl font-medium">
                 <a href="index.html">Shohei MORI</a>
             </h1>
@@ -31,16 +34,16 @@
                 </nav>
             </div>
         </section>
-        <section id="mobile-menu" class="fixed hidden inset-0 backdrop-blur-sm justify-end items-start top-4 right-4 text-xl animate-open-menu">
+        <section id="mobile-menu" class="fixed hidden inset-0 backdrop-blur-sm justify-end items-start top-4 right-4 text-xl animate-open-menu origin-top-right">
             <nav class="flex flex-col px-10 py-4 bg-slate-100 dark:bg-slate-900 border border-gray-700 dark:border-white font-medium rounded-xl" aria-label="mobile">
-                <button class="text-2xl flex justify-end">
+                <button class="text-2xl flex justify-end hover:opacity-90">
                     &times;
                 </button>
-                <a href="index.html" class="w-full py-2 -mt-2">Top</a>
-                <a href="projects.html" class="w-full py-2">Projects</a>
-                <a href="publications.html" class="w-full py-2">Publications</a>
+                <a href="index.html" class="w-full py-2 -mt-2 hover:opacity-90">Top</a>
+                <a href="projects.html" class="w-full py-2 hover:opacity-90">Projects</a>
+                <a href="publications.html" class="w-full py-2 hover:opacity-90">Publications</a>
                 <hr class="my-3 border-t-2 border-black dark:border-white">
-                <div class="flex justify-between items-center w-full py-2">
+                <div class="flex justify-between items-center w-full py-2 hover:opacity-90">
                     <a href="https://researchmap.jp/shoheimori">日本語</a>
                     <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
                         <i class="fa-solid fa-circle-half-stroke"></i>
