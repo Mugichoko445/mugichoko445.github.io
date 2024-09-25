@@ -11,8 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
     "prettier-plugin-tailwindcss": "^0.5.10",
-    "tailwindcss": "^3.4.4"
+    "tailwindcss": "^3.4.13"
   },
   "dependencies": {
     "tailwind-scrollbar-hide": "^1.1.7"
