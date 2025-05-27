@@ -94,7 +94,11 @@
     <script>
         fetch("../../footer.html")
             .then(response => response.text())
-            .then(html => document.getElementById("footer").innerHTML = html);
+            .then(html => {
+                document.getElementById("footer").innerHTML = html;
+                // Wait for footer to load, then update the year
+                document.getElementById('year').innerHTML = new Date().getFullYear();
+            });
     </script>
 </body>
 
