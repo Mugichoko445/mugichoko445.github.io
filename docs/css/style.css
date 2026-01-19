@@ -1016,10 +1016,6 @@ video {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
-
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -1068,10 +1064,6 @@ video {
 
 .font-thin {
   font-weight: 100;
-}
-
-.font-normal {
-  font-weight: 400;
 }
 
 .italic {
