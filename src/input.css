@@ -1,3 +1,21 @@
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+    -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .pub-item {
+    @apply relative pl-3;
+  }
+  .pub-item::before {
+    content: "";
+    @apply absolute left-0 top-0 bottom-0 w-[3px] bg-gray-300 dark:bg-gray-600;
+  }
+}

@@ -3,6 +3,10 @@ module.exports = {
   darkMode: 'class',
   content: ['./docs/**/*.{html,js}'],
   theme: {
+    fontFamily: {
+      sans: ['Inter', 'sans-serif'],
+      mono: ['Fira Code', 'monospace'],
+    },
     extend: {
       keyframes: {
         'open-menu': {
