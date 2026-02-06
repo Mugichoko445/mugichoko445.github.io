@@ -814,10 +814,6 @@ video {
   justify-content: space-between;
 }
 
-.gap-2{
-  gap: 0.5rem;
-}
-
 .gap-1{
   gap: 0.25rem;
 }
@@ -926,6 +922,20 @@ video {
 
 .bg-slate-500\/50{
   background-color: rgb(100 116 139 / 0.5);
+}
+
+.bg-slate-700\/50{
+  background-color: rgb(51 65 85 / 0.5);
+}
+
+.bg-slate-300{
+  --tw-bg-opacity: 1;
+  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200{
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
 }
 
 .p-4{
