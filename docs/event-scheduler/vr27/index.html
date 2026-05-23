@@ -10,10 +10,22 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="auth-screen">
+    <div class="auth-card">
+      <h2>Event Scheduler</h2>
+      <p id="auth-message">Sign in to access the shared schedule.</p>
+      <button id="signin-btn" class="btn btn-primary">Sign in with Google</button>
+    </div>
+  </div>
+
   <div class="container">
 
     <header>
       <h1>Event Scheduler</h1>
+      <div id="user-bar">
+        <span id="user-email"></span>
+        <button id="signout-btn" class="btn btn-ghost btn-sm">Sign out</button>
+      </div>
     </header>
 
     <section class="input-section">

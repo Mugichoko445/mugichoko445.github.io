@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-app.js";
 import { getFirestore, doc, setDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-firestore.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/12.13.0/firebase-auth.js";
 
 // ── Firebase ───────────────────────────────────────────────────────────────
 const firebaseConfig = {
@@ -10,9 +11,11 @@ const firebaseConfig = {
   messagingSenderId: "553251049289",
   appId:             "1:553251049289:web:f13f6dad7ced1dfcd09498"
 };
-const _fbApp  = initializeApp(firebaseConfig);
-const db      = getFirestore(_fbApp);
-const DOC_REF = doc(db, 'scheduler', 'shared');
+const _fbApp   = initializeApp(firebaseConfig);
+const db       = getFirestore(_fbApp);
+const DOC_REF  = doc(db, 'scheduler', 'shared');
+const auth     = getAuth(_fbApp);
+const provider = new GoogleAuthProvider();
 
 // ── State ──────────────────────────────────────────────────────────────────
 let events        = [];
@@ -38,21 +41,54 @@ const calendarView  = document.getElementById('calendar-view');
 const calGrid       = document.getElementById('cal-grid');
 const calPopup      = document.getElementById('cal-popup');
 const calGridWrap   = document.getElementById('cal-grid-wrap');
+const authScreen    = document.getElementById('auth-screen');
+const signinBtn     = document.getElementById('signin-btn');
+const signoutBtn    = document.getElementById('signout-btn');
+const userBar       = document.getElementById('user-bar');
+const userEmailEl   = document.getElementById('user-email');
+const authMessage   = document.getElementById('auth-message');
 
-// ── Init ───────────────────────────────────────────────────────────────────
-(function init() {
-  dateInput.value = toISODate(new Date());
-  onSnapshot(DOC_REF, snapshot => {
-    if (snapshot.exists()) {
-      const data = snapshot.data();
-      if (Array.isArray(data.events)) {
-        events = data.events;
-        nextId  = data.nextId > 0 ? data.nextId : 1;
+// ── Auth & Init ────────────────────────────────────────────────────────────
+let unsubscribeFirestore = null;
+
+signinBtn.addEventListener('click', () => {
+  signInWithPopup(auth, provider).catch(() => {});
+});
+
+signoutBtn.addEventListener('click', () => signOut(auth));
+
+onAuthStateChanged(auth, user => {
+  if (user) {
+    authScreen.style.display = 'none';
+    userBar.style.display    = 'flex';
+    userEmailEl.textContent  = user.email;
+    dateInput.value          = toISODate(new Date());
+    unsubscribeFirestore = onSnapshot(DOC_REF,
+      snapshot => {
+        if (snapshot.exists()) {
+          const data = snapshot.data();
+          if (Array.isArray(data.events)) {
+            events = data.events;
+            nextId  = data.nextId > 0 ? data.nextId : 1;
+          }
+        }
+        render();
+      },
+      error => {
+        if (error.code === 'permission-denied') {
+          if (unsubscribeFirestore) { unsubscribeFirestore(); unsubscribeFirestore = null; }
+          signOut(auth);
+          authMessage.textContent = 'Access denied. This Google account is not authorised.';
+        }
       }
-    }
-    render();
-  });
-})();
+    );
+  } else {
+    if (unsubscribeFirestore) { unsubscribeFirestore(); unsubscribeFirestore = null; }
+    events = [];
+    authScreen.style.display = 'flex';
+    userBar.style.display    = 'none';
+  }
+});
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 function toISODate(d) {

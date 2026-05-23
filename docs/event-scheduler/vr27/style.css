@@ -580,6 +580,62 @@ input[type="text"]:focus {
   gap: 0.5rem;
 }
 
+/* ── Auth screen ────────────────────────────────────────── */
+#auth-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.auth-card {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-3);
+  padding: 2.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 360px;
+  width: 90%;
+  text-align: center;
+}
+
+.auth-card h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.auth-card p {
+  font-size: 0.9375rem;
+  color: var(--text-sec);
+}
+
+/* ── User bar (header) ──────────────────────────────────── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+#user-bar {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+#user-email {
+  font-size: 0.8125rem;
+  color: var(--text-sec);
+}
+
 /* ── Responsive ─────────────────────────────────────────── */
 @media (max-width: 480px) {
   .input-section { flex-direction: column; }
