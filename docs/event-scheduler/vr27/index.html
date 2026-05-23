@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Scheduler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Event Scheduler</h1>
+    </header>
+
+    <section class="input-section">
+      <div class="input-group">
+        <label for="date-input">Date</label>
+        <input type="date" id="date-input">
+      </div>
+      <div class="input-group flex-1">
+        <label for="name-input">Event Name</label>
+        <input type="text" id="name-input" placeholder="Enter event name…" autocomplete="off">
+      </div>
+      <button id="add-btn" class="btn btn-primary">Add Event</button>
+    </section>
+
+    <div class="view-toggle" role="group" aria-label="View mode">
+      <button id="view-list" class="btn active">List</button>
+      <button id="view-calendar" class="btn">Calendar</button>
+    </div>
+
+    <section class="events-section">
+      <div id="events-list"></div>
+
+      <div id="calendar-view" style="display:none">
+        <div class="cal-grid-wrap" id="cal-grid-wrap">
+          <div id="cal-grid"></div>
+        </div>
+      </div>
+    </section>
+
+    <div id="cal-popup"></div>
+
+    <footer class="footer">
+      <button id="export-json" class="btn btn-secondary">Export JSON</button>
+      <button id="import-btn"  class="btn btn-secondary">Import File</button>
+      <input type="file" id="import-file" accept=".json" style="display:none">
+      <button id="clear-btn"    class="btn btn-danger">Clear All</button>
+    </footer>
+
+  </div>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
