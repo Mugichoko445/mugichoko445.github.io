@@ -7,6 +7,40 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
     <script src="js/main.js" defer></script>
+    <script src="js/publications.js" defer></script>
+    <style>
+        .pub-toggle-group {
+            display: inline-flex;
+            border-radius: 9999px;
+            background: rgb(229 231 235);
+            padding: 3px;
+        }
+        .dark .pub-toggle-group {
+            background: rgb(51 65 85);
+        }
+        .pub-toggle-btn {
+            border-radius: 9999px;
+            padding: 0.3rem 1.1rem;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.07em;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            color: inherit;
+            opacity: 0.45;
+            transition: background 0.15s, color 0.15s, opacity 0.15s;
+        }
+        .pub-toggle-btn.active {
+            background: rgb(75 85 99);
+            color: rgb(241 245 249);
+            opacity: 1;
+        }
+        .dark .pub-toggle-btn.active {
+            background: rgb(226 232 240);
+            color: rgb(15 23 42);
+        }
+    </style>
     <link rel="icon" href="assets/img/mixlab.png" type="image/x-icon">
 </head>
 
@@ -52,15 +86,25 @@
         <!--
             publications
         -->
-        <div id="publications" class="flex items-center justify-center px-4 pt-12 pb-2 md:justify-start">
-            <div class="flex-shrink text-xl text-center md:text-left">
-                FULL PUBLICATION LIST
+        <div id="publications" class="flex items-center justify-center px-4 pt-12 pb-1">
+            <div class="flex-shrink text-xl text-center">
+                PUBLICATIONS
+            </div>
+        </div>
+        <div class="flex justify-center px-4 pb-3">
+            <div class="flex-shrink text-center font-extralight">
+                *Shared first/last authorship
+            </div>
+        </div>
+        <div class="flex justify-center px-4 pb-4">
+            <div class="pub-toggle-group">
+                <button id="toggle-all" class="pub-toggle-btn">ALL</button>
+                <button id="toggle-selected" class="pub-toggle-btn active">SELECTED</button>
             </div>
         </div>
 
-        
+
         <section class="max-w-4xl mx-auto px-4 font-extralight">
-            *Shared first/last authorship
             <h2 class="text-xl py-6 text-center md:text-left">2026</h2>
             
             <ul class="space-y-3">
@@ -73,14 +117,14 @@
                     <span class="text-xs bg-gray-200 text-rose-700 rounded-xl px-1">📢 Accepted</span>
                 </li>
                 -->
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Deniz Bickici, Michael Pabst, Shohei Mori, and Dieter Schmalstieg,
                     "<span class="font-semibold">Think While You Map: Asynchronous Vision-Language Agents for Incremental 3D Scene Graphs</span>,"
                     European Conference on Computer Vision (ECCV) (2026.09)
                     <span class="text-xs bg-gray-200 text-rose-700 rounded-xl px-1">📢 Accepted</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Jan Kolberg, Michael Pabst, Verena Biener, Shohei Mori, and Dieter Schmalstieg,
                     "<span class="font-semibold">Semantic Scene Graphs for Creating a Localization-Ready Internet of Things</span>,"
@@ -89,14 +133,14 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2026.3698654" target="_blank">Xplore</a>
                     <span class="text-xs bg-gray-200 text-rose-700 rounded-xl px-1">📢 Early Access</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Yuta Kataoka, Hayato Nozaki, Shohei Mori, Fumihiko Nakamura, Fumihisa Shibata, and Asako Kimura,
                     "<span class="font-semibold">Assessing the Accuracy and Mental Workload of Electromyography Inputs at Different Body Parts</span>,"
                     Journal of Information Processing (JIP) (2026.XX)
                     <span class="text-xs bg-gray-200 text-rose-700 rounded-xl px-1">📢 Accepted</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Motoki Kagami, Yuta Kataoka, Yutaro Hirao, Monica Perusquia-Hernandez, Satoshi Hashiguchi, Hideaki Uchiyama, Kiyoshi Kiyokawa, and Shohei Mori,
                     "<span class="font-semibold">Tag-Along Virtual Windows Increase Perceived Resistance and Task Load in Augmented Reality</span>,"
@@ -121,7 +165,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/VRW70859.2026.00229" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/bGfd6F9xpl8" target="_blank">Video</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Demo</span>
                     Hayato Tanabe, Satoshi Hashiguchi, Yuta Kataoka, Asako Kimura, and Shohei Mori,
                     "<span class="font-semibold">Experiencing Weight Illusion in AR Extended Displays: A Portable Community Demo</span>,"
@@ -143,7 +187,7 @@
                     Proc. Augmented Humans (AHs) (2026.03)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://dl.acm.org/doi/10.1145/3795011.3797415" target="_blank">ACM DL</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Alessandro Luchetti*, Kenta Ito*, Dieter Schmalstieg, Denis Kalkofen, and Shohei Mori,
                     "<span class="font-semibold">NEF: Neural Error Fields for Follow-up Training with Fewer Rays</span>,"
@@ -154,14 +198,14 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/6hsq9Pn-OM4" target="_blank">Video</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://github.com/Mugichoko445/NEF" target="_blank">GitHub</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Kenta Ito, Shiori Ueda, Shohei Mori, Junichi Sugano, Hideyuki Adachi, and Hideo Saito,
                     "<span class="font-semibold">3D Gaussian Reference Parts for Robust Free-Viewpoint Visual Inspection</span>,"
                     IEEE Access, Vol. 14, pp. 37885 - 37896 (2026.03)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/ACCESS.2026.3671877" target="_blank">Xplore</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Fumihiko Nakamura, Yuki Takanaga, Hinata Miyauchi, Yuta Kataoka, Shohei Mori, Fumihisa Shibata, and Asako Kimura,
                     "<span class="font-semibold">Pen Meets Desk: Above-Surface Drawing with Encountered-Type Haptics Using an Extendable Pen</span>,"
@@ -176,7 +220,7 @@
             <h2 class="text-xl py-6 text-center md:text-left">2025</h2>
             
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Xiangyu Wang, Thomas Koehler, Jun Lin Qiu, Shohei Mori, Markus Steinberger, and Dieter Schmalstieg,
                     "<span class="font-semibold">NeuralPVS: Learned Estimation of Potentially Visible Sets</span>,"
@@ -195,7 +239,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://arxiv.org/abs/2512.08577" target="_blank">arXiv</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://github.com/isogawalab/SingleViewSurgicalVideo" target="_blank">GitHub</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Satoshi Hashiguchi*, Yuta Kataoka*, Asako Kimura, and Shohei Mori, "<span class="font-semibold">Perceived Weight of Mediated Reality Sticks</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 31, No. 12 (2025.12)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/hashiguchi_tvcg25" target="_blank">Project Page</a>
@@ -205,7 +249,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.ritsumei.ac.jp/news/detail/?id=4367" target="_blank">Press (JPN)</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🎤 Invited TVCG Paper at IEEE VR 2026</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Yusuke Kitaura, Keigo Hattori, Fumihiko Nakamura, Yuta Kataoka, Fumihisa Shibata, Asako Kimura, and Shohei Mori,
                     "<span class="font-semibold">Not All WIP Are Perceived Equally: Different Speed Expectations in Seated Walk-in-Place Locomotion</span>,"
@@ -216,7 +260,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/kitaura_vrst25/VRST2025_Kitaura.pdf" target="_blank">Slides</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 DAAX Good Experience Design Student Award</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Ke Li, Mana Masuda, Susanne Schmidt, and Shohei Mori, "<span class="font-semibold">Radiance Fields in XR: A Survey on How Radiance Fields are Envisioned and Addressed for XR Research</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Special Issue IEEE ISMAR, Vol. 31, Issue 11, pp. 9709 - 9719 (2025.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/rf4xr/papers/li_tvcg25" target="_blank">Project Page</a>
@@ -226,7 +270,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/rf4xr/papers/li_tvcg25/ISMAR2025_RF4XR.pdf" target="_blank">Slides</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://github.com/mediated-reality/awesome-rf4xr" target="_blank">Data</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Ayaka Yasunaga, Hideo Saito, Dieter Schmalstieg, and Shohei Mori, "<span class="font-semibold">IntelliCap: Intelligent Guidance for Consistent View Sampling</span>," Proc. IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) (2025.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/yasunaga_ismar25" target="_blank">Project Page</a>
@@ -236,7 +280,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/vg1Gkv4g4o8?si=Sn40lmDiv6hiBpER&t=2841" target="_blank">Talk</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/yasunaga_ismar25/ISMAR2025_IntelliCap.pdf" target="_blank">Slides</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Yuna Kato, Shohei Mori, Hideo Saito, Yoshifumi Takatsume, Hiroki Kajita, and Mariko Isogawa, "<span class="font-semibold">Occlusion-free 4D Gaussians for Open Surgery Videos Using Multi-Camera Shadowless Lamps</span>," Proc. Int. Conf. on Medical Image Computing and Computer Assisted Intervention (MICCAI) (2025.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://isogawa.ics.keio.ac.jp/projects/4DGS-McSL" target="_blank">Project Page</a>
@@ -244,7 +288,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://isogawa.ics.keio.ac.jp/assets/pdf/4DGS-McSL/Spotlight01-6-Kato.pdf" target="_blank">Slides</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🎖️ Spotlight Presentation</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Ayaka Yasunaga, Hideo Saito, and Shohei Mori, "<span class="font-semibold">User-in-the-Loop View Sampling with Error Peaking Visualization</span>," Proc. IEEE Int. Conf. on Image Processing (ICIP) (2025.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/yasunaga_icip25" target="_blank">Project Page</a>
@@ -254,17 +298,17 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/JloddMc_Upg?si=AfwD3fgdWhLFljG9" target="_blank">Talk</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/yasunaga_icip25/ICIP2025_Poster.pdf" target="_blank">Poster</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Keynote</span>
                     Shohei Mori, "<span class="font-semibold">XR Meets Radiance Fields</span>," EURASIP Summer School XRTX 2025 (2025.7.8)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.gti.ssr.upm.es/summer_school/program.html" target="_blank">Web</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Tutorial</span>
                     Shohei Mori, Ke Li, and Mana Masuda, "<span class="font-semibold">A Practical Guide to Radiance Fields for XR Research and Applications</span>," at IEEE VR 2025 (2025.3.8)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/rf4xr/vr25tutorial" target="_blank">Web</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Kenta Horikawa, Mariko Isogawa, Hideo Saito, and Shohei Mori, "<span class="font-semibold">Dense Depth from Event Focal Stack</span>," Proc. IEEE/CVF Winter Conference on Applications of Computer Vision (WACV) (2025.2)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://mediated-reality.github.io/projects/horikawa_wacv25" target="_blank">Project Page</a>
@@ -304,21 +348,21 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://ieeexplore.ieee.org/document/10765206" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="assets/pdf/mori_worxr24.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     David Mandl, Shohei Mori, Peter Mohr, Yifan (Evan) Peng, Tobias Langlotz, Dieter Schmalstieg, and Denis Kalkofen, "<span class="font-semibold">Neural Bokeh: Learning Lens Blur for Computational Videography and Out-of-Focus Mixed Reality</span>," Proc. Conf. on Virtual Reality and 3D User Interfaces (VR) (2024.3)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralbokeh/" target="_blank">Project Page</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralbokeh/assets/vr24_mandl_paper.pdf" target="_blank">PDF</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/BEeE6qY5ytk" target="_blank">Video</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Christina Schwarz-Gsaxner, Shohei Mori, Dieter Schmalstieg, Jan Egger, Gerhard Paar, Werner Bailer, and Denis Kalkofen, "<span class="font-semibold">DeepDR: Deep Structure-Aware RGB-D Inpainting for Diminished Reality</span>," Proc. Int. Conf. on 3D Vision (3DV) (2024.3)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/deepdr/" target="_blank">Project Page</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://arxiv.org/abs/2312.00532" target="_blank">arXiv</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/ahBl6M5kfLs" target="_blank">Video</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Shiori Ueda, Hideo Saito, and Shohei Mori, "<span class="font-semibold">Toward Multi-Plane Image Reconstruction from a Casually Captured Focal Stack</span>," Proc. Int. Conf. on Computer Vision Theory and Applications (VISAPP) (2024.2)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="projects/ueda_visapp24/" target="_blank">Project Page</a>
@@ -332,12 +376,12 @@
             <h2 class="text-xl py-6 text-center md:text-left">2023</h2>
             
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Tutorial</span>
                     Shohei Mori and Richard Skarbez, "<span class="font-semibold">A Beginner's Guide to Neural Rendering</span>," at IEEE ISMAR 2023 (2023.10.20)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.richardskarbez.com/nerf-tutorial" target="_blank">Web</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Reina Ishikawa, Hideo Saito, Denis Kalkofen, and Shohei Mori, "<span class="font-semibold">Multi-layer Scene Representation from Composed Focal Stacks</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Special Issue IEEE ISMAR, Vol. 29, Issue 11, pp. 4719 - 4729 (2023.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/fs2mpi/" target="_blank">Project Page</a>
@@ -347,7 +391,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/hmqTxePDIQU?si=N-VSLMJVx1dlt8ay" target="_blank">Talk</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 Best Journal Paper Award</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Dieter Schmalstieg, and Denis Kalkofen, "<span class="font-semibold">Exemplar-Based Inpainting for 6DOF Virtual Reality Photos</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Special Issue IEEE ISMAR, Vol. 29, Issue 11, pp. 4644 - 4654 (2023.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/msiinpainting/" target="_blank">Project Page</a>
@@ -357,7 +401,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/C35QsyjZmdc?si=il1d8VqU-UlV8wMn" target="_blank">Talk</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 Best Journal Paper Award Nominee</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Lucchas Ribeiro Skreinig, Denis Kalkofen, Ana Stanescu, Peter Mohr, Frank Heyenm, Shohei Mori, Michael Sedlmair, Dieter Schmalstieg, and Alexander Plopski, "<span class="font-semibold">guitARhero: Interactive Augmented Reality Guitar Tutorials</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Special Issue IEEE ISMAR, Vol. 29, Issue 11, pp. 4676 - 4685 (2023.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/guitarhero/" target="_blank">Project Page</a>
@@ -365,7 +409,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/guitarhero/assets/ribeiroskreinig_tvcg23_paper.pdf" target="_blank">PDF</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/x-Z3dnX8OGI" target="_blank">Video</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Ana Stanescu, Peter Mohr, Mateusz Kozinski, Shohei Mori, Dieter Schmalstieg, and Denis Kalkofen, "<span class="font-semibold">State-Aware Configuration Detection for Augmented Reality Step-by-Step Tutorials</span>," Proc. IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) (2023.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/stateawareconfigdetection/" target="_blank">Project Page</a>
@@ -377,20 +421,20 @@
                     Max Bergfelt, Viktor Larsson, Hideo Saito, and Shohei Mori, "<span class="font-semibold">Compacting Singleshot Multi-Plane Image via Scale Adjustment</span>," Proc. IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR)-Adjunct (2023.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="assets/pdf/bergfelt_ismar23_poster_paper.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Yuna Kato, Mariko Isogawa, Shohei Mori, Hideo Saito, Hiroki Kajita, and Yoshifumi Takatsume, "<span class="font-semibold">High-Quality Virtual Single-Viewpoint Surgical Video: Geometric Autocalibration of Multiple Cameras in Surgical Lights</span>," Proc. Int. Conf. on Medical Image Computing and Computer Assisted Intervention (MICCAI) (2023.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://github.com/isogawalab/SingleViewSurgicalVideo/" target="_blank">GitHub</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://arxiv.org/abs/2503.03558" target="_blank">arXiv</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://link.springer.com/chapter/10.1007/978-3-031-43996-4_26" target="_blank">Springer Link</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Satoshi Hashiguchi, Fumihisa Shibata, and Asako Kimura, "<span class="font-semibold">Point & Teleport with Orientation Specification, Revisited: Is Natural Turning Always Superior?</span>," Journal of Information Processing (JIP), Vol. 31, pp. 392 - 403 (2023.6)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="projects/mori_jip23/" target="_blank">Project Page</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.2197/ipsjjip.31.392" target="_blank">J-Stage</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Miki Matsumuro, Shohei Mori, Yuta Kataoka, Fumiaki Igarashi, Fumihisa Shibata, and Asako Kimura, "<span class="font-semibold">Modified Egocentric Viewpoint for Softer Seated Experience in Virtual Reality</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Special Issue IEEE Virtual Reality (VR), Vol. 29, Issue 5, pp. 2230 - 2238 (2023.5)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="projects/matsumuro_tvcg23/" target="_blank">Project Page</a>
@@ -398,7 +442,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/IEEE2023_matsumuro.pdf" target="_blank">PDF</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/l2Y9_5fGH1Q" target="_blank">Video</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Mizuki Obayashi, Shohei Mori, Hideo Saito, Hiroki Kajita, and Yoshifumi Takatsume, "<span class="font-semibold">Multi-view Surgical Camera Calibration with None-Feature-Rich Video Frames: Toward 3D Surgery Playback</span>," Applied Sciences, Vol. 13, Issue 4 (2023.2)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.mdpi.com/2076-3417/13/4/2447" target="_blank">MDPI</a>
@@ -413,7 +457,7 @@
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Invited Talk</span>
                     Shohei Mori, "<span class="font-semibold">How Far Can We Go for Diminished Reality Without Neural Networks?</span>," Workshop on Inpainting Techniques for Object Removal in Indoor Scenes (IEEE ISMAR 2022 Workshop) (2022.10)
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Dieter Schmalstieg, and Denis Kalkofen, "<span class="font-semibold">Good Keyframes to Inpaint</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 29, Issue 9, pp. 3989 - 4000 (2022.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/goodkfstoinpaint/" target="_blank">Project Page</a>
@@ -423,7 +467,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/LTU5NV-Chu4" target="_blank">Talk</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90">🎤 Invited TVCG Paper at IEEE ISMAR 2022</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Christoph Ebner, Shohei Mori, Peter Mohr, Yifan (Evan) Peng, Dieter Schmalstieg, Gordon Wetzstein, and Denis Kalkofen, "<span class="font-semibold">Video See-Through Mixed Reality with Focus Cues</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Special Issue IEEE Virtual Reality (VR), Vol. 28, Issue 5, pp. 2256 - 2266 (2022.5)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/gazecontingentvst/" target="_blank">Project Page</a>
@@ -437,7 +481,7 @@
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🎖️ IEEE TVCG VR Session (Invited Talk) at SIGGRAPH Asia 2022</span>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🎖️ VR and AR Theme (Invited Talk) at FiO+LS 2022</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Shohei Mori, Yuta Kataoka, and Satoshi Hashiguchi, "<span class="font-semibold">Exploring Pseudo-Weight in Augmented Reality Extended Displays</span>," Proc. IEEE Virtual Reality (2022.3)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="projects/mori_vr22/" target="_blank">Project Page</a>
@@ -461,7 +505,7 @@
             <h2 class="text-xl py-6 text-center md:text-left">2021</h2>
 
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     David Mandl, Peter Mohr, Tobias Langlotz, Christoph Ebner, Shohei Mori, Stefanie Zollmann, Peter Roth, and Denis Kalkofen, "<span class="font-semibold">Neural Cameras: Learning Camera Characteristics for Coherent Mixed Reality Rendering</span>," Proc. IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) (2021.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralcameras/" target="_blank">Project Page</a>
@@ -472,13 +516,13 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/neuralcameras/assets/ismar21_mandl_slides.pdf" target="_blank">Slides</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 Best Conference Paper Award</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Stefanie Zollmann, Raphael Grasset, Tobias Langlotz, Wei Hong Lo, Shohei Mori, and Holger Regenbrecht, "<span class="font-semibold">Visualization Techniques in Augmented Reality: A Taxonomy, Methods and Patterns</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 27, Issue 9, pp. 3808 - 3825 (2021.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/TVCG.2020.2986247" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.hci.otago.ac.nz/papers/ZollmannIEEETVCG2020.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Tutorial</span>
                     Denis Kalkofen, Shohei Mori, and Markus Tatzgern, "<span class="font-semibold">Rendering and Visualization in Mixed Reality</span>," Eurographics 2021 - Tutorials (2021.5)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://diglib.eg.org/handle/10.2312/egt20211036" target="_blank">Eurographics DL</a>
@@ -490,7 +534,7 @@
             <h2 class="text-xl py-6 text-center md:text-left">2020</h2>
 
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Masahiro Yamaguchi, Shohei Mori, Peter Mohr, Markus Tatzgern, Ana Stanescu, Hideo Saito, and Denis Kalkofen, "<span class="font-semibold">Video-Annotated Augmented Reality Assembly Tutorials</span>," Proc. ACM Symp. on User Interface Software and Technology (UIST), pp. 1010–1022 (2020.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/videoannotatedtutorials" target="_blank">Project Page</a>
@@ -499,7 +543,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/m8uUDR8DERY" target="_blank">Video</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://youtu.be/PUtGlPcR9f0" target="_blank">Talk</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Okan Erat, Wolfgang Broll, Hideo Saito, Dieter Schmalstieg, and Denis Kalkofen, "<span class="font-semibold">InpaintFusion: Incremental RGB-D Inpainting for 3D Scenes</span>," IEEE Trans. on Visualization and Computer Graphics (TVCG), Vol. 26, Issue 10, pp. 2994 - 3007 (2020.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/inpaintfusion/" target="_blank">Project Page</a>
@@ -522,7 +566,7 @@
                     Hideaki Uchiyama, Takafumi Taketomi, Sei Ikeda, and Shohei Mori, "<span class="font-semibold">Basics and Advances in Monocular vSLAM</span>," Smart Sensors and Systems: Technology Advancement and Application Demonstrations, Springer International Publishing, pp. 93-104 (2020.6)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://link.springer.com/chapter/10.1007%2F978-3-030-42234-9_5" target="_blank">Springer Link</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Peter Mohr-Ziak, Shohei Mori, Tobias Langlotz, Bruce H. Thomas, Dieter Schmalstieg, and Denis Kalkofen, "<span class="font-semibold">Mixed Reality Light Fields for Interactive Remote Assistance</span>," Proc. ACM CHI Conf. on Human Factors in Computing Systems (CHI) (2020.4)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://immersive-technology-lab.github.io/projects/mrlightfields/" target="_blank">Project Page</a>
@@ -535,19 +579,19 @@
             <h2 class="text-xl py-6 text-center md:text-left">2019</h2>
 
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Workshop</span>
                     Denis Kalkofen, Shohei Mori, Tobias Ladinig, Lea Daling, Anas Abdelrazeq, Markus Ebner, Manuel Ortega, Susanne Feiel, Sebastian Gabl, Taras Shepel, James Tibbett, Teemu H. Laine, Michael Hitch, Carsten Drebenstedt, and Peter Mose, "<span class="font-semibold">Tools for Teaching Mining Students in Virtual Reality based on 360° Video Experiences</span>," Proc. IEEE Virtual Reality Workshop on K-12+ Embodied Learning through Virtual & Augmented Reality (KELVAR) (2020.3)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/VRW50115.2020.00096" target="_blank">Xplore</a>
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 Best Paper Award</span>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Tomoya Kaichi, Shohei Mori, Hideo Saito, Kosuke Takahashi, Dan Mikami, Mariko Isogawa, Yoshinori Kusachi, "<span class="font-semibold">Image-based Center of Mass Estimation of the Human Body via 3D Shape and Kinematic Structure</span>," Sports Engineering, 22:17 (2019.12)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://link.springer.com/article/10.1007/s12283-019-0309-2" target="_blank">Springer Link</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://link.springer.com/content/pdf/10.1007/s12283-019-0309-2.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Chanya Lueangwattana, Shohei Mori, and Hideo Saito, "<span class="font-semibold">Removing Fences from Sweep Motion Videos Using Global 3D Reconstruction and Fence-aware Light Field Rendering</span>," Computational Visual Media, pp. 1 - 12 (2019.4)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1007/s41095-018-0126-8" target="_blank">Springer Link</a>
@@ -572,7 +616,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/ISMAR-Adjunct.2018.00020" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://arbook.icg.tugraz.at/schmalstieg/Schmalstieg_357.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori and Hideo Saito, "<span class="font-semibold">An Overview of Augmented Visualization: Observing the Real World as Desired</span>," APSIPA Trans. on Signal and Information Processing, Vol. 7, pages E12 (2018.10)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="http://dx.doi.org/10.1017/ATSIP.2018.13" target="_blank">now publishers</a>
@@ -584,7 +628,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/CVPRW.2018.00234" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://openaccess.thecvf.com/content_cvpr_2018_workshops/papers/w34/Kaichi_Estimation_of_Center_CVPR_2018_paper.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Masahiro Yamaguchi, Trong-Phuc Truong, Shohei Mori, Vincent Nozick, Hideo Saito, Shoji Yachida, and Hideaki Sato, "<span class="font-semibold">Superimposing Thermal-Infrared Data on 3D Structure Reconstructed by RGB Visual Odometry</span>," IEICE Trans. on Information and Systems, Vol. E101-D, No. 5, pp. 1296 - 1307 (2018.5)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://search.ieice.org/bin/summary.php?id=e101-d_5_1296" target="_blank">IEICE</a>
@@ -595,7 +639,7 @@
                     Chanya Lueangwattana, Shohei Mori, and Hideo Saito, "<span class="font-semibold">Diminishing Fence from Sweep Image Sequences Using Structure from Motion and Light Field Rendering</span>," USB Memory Proc. Asia Pacific Workshop on Mixed and Augmented Reality (APMAR) (2018.4)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="http://hvrl.ics.keio.ac.jp/paper/pdf/international_Conference/2018/APMAR2018_Chanya.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Shohei Mori, Sei Ikeda, Alexander Plopski, and Christian Sandor, "<span class="font-semibold">BrightView: Increasing Perceived Brightness of Optical See-Through Head-Mounted Displays Through Unnoticeable Incident Light Reduction</span>," Proc. IEEE Virtual Reality (2018.3)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://github.com/Mugichoko445/BrightView" target="_blank">Project Page</a>
@@ -678,7 +722,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/ICCVW.2017.57" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://openaccess.thecvf.com/content_ICCV_2017_workshops/papers/w6/Truong_Registration_of_RGB_ICCV_2017_paper.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Momoko Maezawa, and Hideo Saito, "<span class="font-semibold">A Work Area Visualization by Multi-view Camera-based Diminished Reality</span>," Multimodal Technologies and Interaction (MTI), Vol. 1, Issue 3, No. 18, pp. 1 - 12 (2017.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.mdpi.com/2414-4088/1/3/18" target="_blank">MDPI</a> 
@@ -697,7 +741,7 @@
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Workshop</span>
                     Masaru Horita, Daiki Sakauchi, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Empowering a POB-Diminished Reality Method to Handle Rigid Moving Objects with Real-time Observation</span>," USB Memory Proc. Asia Pacific Workshop on Mixed and Augmented Reality (APMAR) (2017.7)
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Sei Ikeda, and Hideo Saito, "<span class="font-semibold">A Survey of Diminished Reality: Techniques for Visually Concealing, Eliminating, and Seeing Through Real Objects</span>," IPSJ Trans. on Computer Vision and Applications (CVA), Vol. 9, No. 17, SpringerOpen (2017.6)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1186/s41074-017-0028-1" target="_blank">Springer Link</a>
@@ -726,7 +770,7 @@
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://doi.org/10.1109/ISMAR-Adjunct.2016.0099" target="_blank">Xplore</a>
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="http://hvrl.ics.keio.ac.jp/paper/pdf/international_Conference/2016/IWDR2016_Ienaga.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Journal</span>
                     Shohei Mori, Yuya Eguchi, Sei Ikeda, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Design and Construction of Data Acquisition Facilities for Diminished Reality Research</span>," ITE Trans. on Media Technology and Application (MTA), Vol. 4, No. 3, p. 259 - 268 (2016.7)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="https://www.jstage.jst.go.jp/article/mta/4/3/4_259/_article" target="_blank">J-Stage</a>
@@ -763,7 +807,7 @@
                     Daiki Sakauchi, Yuichi Matsumi, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Magical Mystery Room, 2nd Stage</span>," Proc. IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) (2015.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="http://www.rm2c.ise.ritsumei.ac.jp/rm/pdf/ISMAR2015_sakauchi.pdf" target="_blank">PDF</a>
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Demo</span>
                     Ryotaro Hirata, Tomoka Ishibashi, Jianing Qie, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">DOMINO (Do Mixed-reality Non-stop) Toppling</span>," Proc. IEEE Int. Symp. on Mixed and Augmented Reality (ISMAR) (2015.9)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="projects/hirata_ismar16/" target="_blank">Project Page</a>
@@ -774,7 +818,7 @@
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Presentation</span>
                     Yudai Nakanishi, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Image-based Recovery of Geometrically Complex Backgrounds in Diminished Reality (2) -Capturing Light Fields Data Using a Handheld Camera-</span>," USB Memory Proc. the 8th Korea-Japan Workshop on Mixed Reality (KJMR) (2015.4)
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Presentation</span>
                     Yuichi Matsumi, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">An AR/MR Camera Tracker Using View Dependent Texture Mapping</span>," USB Memory Proc. Korea-Japan Workshop on Mixed Reality (KJMR) (2015.4)
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 Best Presentation Award</span>
@@ -784,7 +828,7 @@
             <h2 class="text-xl py-6 text-center md:text-left">2014</h2>
 
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Tutorial</span>
                     Shohei Mori, "<span class="font-semibold">Diminished Reality: History, New Definition, and Recent Progress</span>," Diminished Reality Tutorial at IEEE ISMAR 2014, Munich, Germany (2014.9.9)
                 </li>
@@ -792,7 +836,7 @@
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Presentation</span>
                     Kohei Yanagida, Yudai Nakanishi, Shohei Mori, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Image-based Recovery of Geometrically Complex Backgrounds in Diminished Reality</span>," USB Memory Proc. the 7th Korea-Japan Workshop on Mixed Reality (KJMR) (2014.4)
                 </li>
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Presentation</span>
                     Shohei Mori, Yuya Eguchi, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Building a Data Acquisition Studio for Diminished Reality Research</span>," USB Memory Proc. the 7th Korea-Japan Workshop on Mixed Reality (KJMR) (2014.4)
                     <span class="text-xs border border-black dark:border-white rounded-xl px-1">🏆 Best Presentation Award</span>
@@ -830,7 +874,7 @@
             <h2 class="text-xl py-6 text-center md:text-left">2011</h2>
 
             <ul class="space-y-3">
-                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight">
+                <li class="pub-item hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors colors rounded-md px-1 leading-tight" data-selected="true">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Conference</span>
                     Shohei Mori, Ryosuke Ichikari, Fumihisa Shibata, Asako Kimura, and Hideyuki Tamura, "<span class="font-semibold">Enabling On-set Stereoscopic MR-based Previsualization for 3D Filmmaking</span>," Proc. SIGGRAPH Asia, Technical Sketches (2011.12)
                     <a class="text-xs border border-black dark:border-white rounded-xl px-1 hover:opacity-90" href="projects/mori_siga11/" target="_blank">Project Page</a>
