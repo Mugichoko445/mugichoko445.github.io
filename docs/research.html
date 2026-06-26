@@ -10,7 +10,7 @@
     <link rel="icon" href="assets/img/mixlab.png" type="image/x-icon">
 </head>
 
-<body class="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-700 dark:text-white font-medium text-justify">
+<body class="min-h-screen dark:bg-slate-950 dark:text-white font-medium text-justify">
     <!--
         navbar
     -->
@@ -39,7 +39,7 @@
                 <a href="publications.html" class="pb-2 hover:opacity-90">Publications</a>
                 <div class="flex justify-between items-center hover:opacity-90">
                     <a href="https://researchmap.jp/shoheimori" class="pb-2 hover:opacity-90">日本語</a>
-                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
+                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white">
                         <i class="fa-solid fa-circle-half-stroke"></i>
                     </button>
                 </div>
@@ -964,6 +964,24 @@
                 // Wait for footer to load, then update the year
                 document.getElementById('year').innerHTML = new Date().getFullYear();
             });
+    </script>
+    <button id="scroll-top-btn"
+        class="fixed bottom-6 right-6 z-50 w-10 h-10 rounded-full bg-slate-500/70 dark:bg-slate-700/70 text-white flex items-center justify-center opacity-0 pointer-events-none transition hover:opacity-90 cursor-pointer"
+        onclick="window.scrollTo({top:0,behavior:'smooth'})"
+        aria-label="Back to top">
+        <i class="fa-solid fa-angles-up text-sm"></i>
+    </button>
+    <script>
+        const scrollTopBtn = document.getElementById('scroll-top-btn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 200) {
+                scrollTopBtn.classList.remove('opacity-0', 'pointer-events-none');
+                scrollTopBtn.classList.add('opacity-100');
+            } else {
+                scrollTopBtn.classList.add('opacity-0', 'pointer-events-none');
+                scrollTopBtn.classList.remove('opacity-100');
+            }
+        });
     </script>
 </body>
 
