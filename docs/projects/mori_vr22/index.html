@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mori et al., IEEE VR 2022</title>
+    <link rel="stylesheet" href="../../css/tailwind.css">
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../assets/fontawesome-free-6.5.1-web/css/all.min.css">
 	<link rel="stylesheet" href="../../assets/academicons-1.9.4/css/academicons.min.css">
     <link rel="icon" href="../../assets/img/mixlab.png" type="image/x-icon">
-    <script src="../../js/projects.js" defer></script>
 </head>
 
 <body class="min-h-screen bg-slate-100 max-w-4xl mx-auto font-thin">
@@ -95,9 +95,6 @@
     </main>
 
     <script>
-        document.getElementById('year').innerHTML = new Date().getFullYear();
-    </script>
-    <script>
         function copyCodeToClipboard() {
         const copyText = document.getElementById('codeBlock').innerText;
         const textArea = document.createElement('textarea');
@@ -116,16 +113,24 @@
     </script>
 
     <!-- footer -->
-    <div id="footer"></div>
-    <script>
-        fetch("../../footer.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById("footer").innerHTML = html;
-                // Wait for footer to load, then update the year
-                document.getElementById('year').innerHTML = new Date().getFullYear();
-            });
-    </script>
+    <footer class="font-extralight text-sm text-white">
+        <div class="mx-2 pt-3">
+            <section class="max-w-4xl mx-auto p-4 flex flex-row justify-between bg-slate-500/50 dark:bg-slate-900 rounded-md">
+                <address class="not-italic">
+                    <h2><a href="https://mugichoko445.github.io">Shohei Mori</a></h2>
+                    Universitätsstr. 38,<br>
+                    70569 Stuttgart, Germany<br>
+                    Email: <a href="mailto:s.mori.jp@ieee.org">s.mori.jp [at] ieee.org</a>
+                </address>
+                <div class="flex flex-col justify-end">
+                    <p class="text-right">Copyright &copy; <span id="year"></span></p>
+                    <p class="text-right">All Rights Researved</p>
+                </div>
+            </section>
+        </div>
+    </footer>
+    <div class="h-4"><!-- spacer --></div>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 
 </html>

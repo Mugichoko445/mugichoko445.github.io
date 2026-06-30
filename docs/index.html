@@ -1,118 +1,681 @@
 <!DOCTYPE html>
-<html lang="en" class="font-sans">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shohei MORI</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-6.5.1-web/css/all.min.css">
-    <link rel="stylesheet" href="assets/academicons-1.9.4/css/academicons.min.css">
-    <script src="js/main.js" defer></script>
-    <link rel="icon" href="assets/img/mixlab.png" type="image/x-icon">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shohei Mori, PhD</title>
+  <link rel="icon" type="image/png" href="assets/img/mixlab.png" sizes="96x96">
+  <meta name="description" content="Junior Research Group Leader at VISUS, University of Stuttgart. Research on 3D vision for XR and human-centered computing.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./css/tailwind.css">
+  <link rel="stylesheet" href="./css/style.css">
 </head>
+<body class="bg-white min-h-screen flex flex-col text-gray-800">
 
-<body class="min-h-screen dark:bg-slate-950 dark:text-white font-medium text-justify">
-    <!--
-        navbar
-    -->
-    <header class="dark:text-white bg-slate-500/50 dark:bg-slate-700/50 sticky top-0 z-10 font-extralight">
-        <section class="backdrop-blur-sm max-w-4xl mx-auto px-4 py-3 flex justify-between items-center">
-            <div class="flex items-center">
-                <h1 class="text-xl"><a href="index.html">SHOHEI MORI</a>
+  <!-- HEADER -->
+  <header class="bg-surface border-b border-gray-200 sticky top-0 z-50">
+    <div class="max-w-site mx-auto px-4">
+      <div class="flex items-center justify-between py-4">
+        <!-- Site Title -->
+        <div class="flex-shrink-0">
+          <h1 class="text-xl font-bold">
+            <a href="/" class="text-primary hover:text-accent hover:no-underline">Shohei Mori</a>
+          </h1>
+        </div>
+
+        <!-- Desktop Nav -->
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/" class="text-primary text-sm no-underline hover:text-accent font-bold">Home</a>
+          <a href="research.html" class="text-primary text-sm no-underline hover:text-accent">Research</a>
+          <a href="publications.html" class="text-primary text-sm no-underline hover:text-accent">Publications</a>
+          <a href="cv.html" class="text-primary text-sm no-underline hover:text-accent">CV</a>
+        </nav>
+
+        <!-- Mobile hamburger + floating dropdown -->
+        <div class="md:hidden relative">
+          <button
+            class="p-2 text-primary"
+            onclick="document.getElementById('mobile-menu').classList.toggle('open')"
+            aria-label="Toggle navigation"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="currentColor">
+              <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+            </svg>
+          </button>
+          <nav id="mobile-menu" class="absolute right-0 top-full bg-white shadow-md z-50 py-2 w-40">
+            <a href="/" class="font-bold text-primary text-sm no-underline hover:text-accent block px-4 py-2">Home</a>
+            <a href="research.html" class="text-primary text-sm no-underline hover:text-accent block px-4 py-2">Research</a>
+            <a href="publications.html" class="text-primary text-sm no-underline hover:text-accent block px-4 py-2">Publications</a>
+            <a href="/cv" class="text-primary text-sm no-underline hover:text-accent block px-4 py-2">CV</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BANNER -->
+  <div class="relative overflow-hidden h-[13.75rem]">
+    <!-- Blurred background layer -->
+    <img
+      src="assets/img/hero.jpg"
+      alt=""
+      class="absolute inset-0 w-full h-full object-cover"
+      style="filter: blur(10px); transform: scale(1.05);"
+      aria-hidden="true"
+    />
+    <!-- Main banner image -->
+    <img
+      src="assets/img/hero.jpg"
+      alt="Banner image"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main class="max-w-site mx-auto px-4 pt-0 pb-8 flex-1">
+    <div class="flex flex-col md:flex-row gap-8 -mt-20 items-start relative z-10">
+
+      <!-- SIDEBAR (desktop only) -->
+      <aside class="hidden md:block w-62.5 shrink-0">
+        <!-- Profile Photo -->
+        <div class="mb-6">
+          <div class="shadow-[0_0_0_4px_white]">
+            <div class="relative w-full bg-gray-300 pt-[100%]">
+              <img
+                src="./assets/img/smori_square.jpg"
+                alt="Shohei Mori"
+                class="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
-            <div class="mr-2">
-                <buttom id="hamburger-button" class="text-sm md:hidden cursor-pointer relative w-8 h-8">
-                    &#9776;
-                </buttom>
-                <nav class="hidden md:block space-x-8 text-sm" aria-label="main">
-                    <a href="research.html" class="hover:opacity-90">Research</a>
-                    <a href="publications.html" class="hover:opacity-90">Publications</a>
-                    <a href="https://researchmap.jp/shoheimori" class="hover:opacity-90">日本語</a>
-                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
-                    </button>
-                </nav>
+          </div>
+        </div>
+
+        <!-- Name & Title -->
+        <div class="mb-4">
+          <div class="text-2xl font-bold leading-tight">Shohei Mori</div>
+          <div class="text-base text-gray-700 mt-1">Junior Research Group Leader</div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="mb-4">
+          <p class="text-base mb-1">
+            <a href="mailto:s.mori.jp@ieee.org" class="text-accent">s.mori.jp@ieee.org</a>
+          </p>
+          <hr class="border-0 my-2">
+          <p class="text-base">Visualization Research Center (VISUS)</p>
+          <p class="text-base">University of Stuttgart, Germany</p>
+          <hr class="border-0 my-4">
+        </div>
+
+        <!-- Social Links -->
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+            <span class="w-4 h-4 flex items-center justify-center shrink-0">
+              <i class="ai ai-google-scholar" aria-hidden="true"></i>
+            </span>
+            <a href="https://scholar.google.com/citations?user=U5lf_WEAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer" class="text-accent text-base">Google Scholar</a>
+          </div>
+          <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+            <span class="w-4 h-4 flex items-center justify-center shrink-0">
+              <i class="ai ai-researchgate" aria-hidden="true"></i>
+            </span>
+            <a href="https://www.researchgate.net/profile/Shohei-Mori" target="_blank" rel="noopener noreferrer" class="text-accent text-base">ResearchGate</a>
+          </div>
+          <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+            <span class="w-4 h-4 flex items-center justify-center shrink-0">
+              <i class="ai ai-orcid" aria-hidden="true"></i>
+            </span>
+            <a href="https://orcid.org/0000-0003-0540-7312" target="_blank" rel="noopener noreferrer" class="text-accent text-base">ORCID</a>
+          </div>
+          <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+            <span class="w-4 h-4 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            </span>
+            <a href="https://twitter.com/Mugichoko445" target="_blank" rel="noopener noreferrer" class="text-accent text-base">Twitter</a>
+          </div>
+          <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+            <span class="w-4 h-4 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+            </span>
+            <a href="https://www.linkedin.com/in/shohei-mori-66678818a" target="_blank" rel="noopener noreferrer" class="text-accent text-base">LinkedIn</a>
+          </div>
+          <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+            <span class="w-4 h-4 flex items-center justify-center shrink-0">
+              <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </span>
+            <a href="https://github.com/Mugichoko445" target="_blank" rel="noopener noreferrer" class="text-accent text-base">GitHub</a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAIN CONTENT AREA -->
+      <div class="flex-1 min-w-0 md:pt-24">
+
+        <!-- Mobile: Profile card -->
+        <div class="md:hidden mb-6">
+          <div class="w-60 mx-auto mb-4">
+            <div class="shadow-[0_0_0_4px_white]">
+              <div class="relative w-full bg-gray-300 pt-[100%]">
+                <img
+                  src="./assets/img/smori_square.jpg"
+                  alt="Shohei Mori"
+                  class="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
             </div>
-        </section>
-        <section id="mobile-menu" class="fixed hidden inset-0 backdrop-blur-sm justify-center items-start top-20 text-xl animate-open-menu origin-top">
-            <nav class="flex flex-col p-4 w-full mx-2 bg-slate-100 dark:bg-slate-900 border border-gray-700 dark:border-white rounded-xl" aria-label="mobile">
-                <a href="research.html" class="pb-2 hover:opacity-90">Research</a>
-                <a href="publications.html" class="pb-2 hover:opacity-90">Publications</a>
-                <div class="flex justify-between items-center hover:opacity-90">
-                    <a href="https://researchmap.jp/shoheimori" class="pb-2 hover:opacity-90">日本語</a>
-                    <button id="theme-button" class="hover:opacity-90 cursor-pointer text-black dark:text-white ">
-                        <i class="fa-solid fa-circle-half-stroke"></i>
-                    </button>
-                </div>
-            </nav>
-        </section>
-    </header>
+          </div>
+          <div class="text-center">
+            <h2 class="text-2xl font-bold">Shohei Mori</h2>
+            <p class="text-lg text-gray-600 mt-1">Junior Research Group Leader</p>
+            <div class="mt-4">
+              <button
+                class="bg-accent text-white px-5 py-2 rounded cursor-pointer inline-block text-[0.9rem] no-underline hover:bg-accent-dark hover:text-white"
+                onclick="document.getElementById('contact-modal').classList.add('open')"
+              >Contact</button>
+            </div>
+          </div>
+        </div>
 
-    <main class="max-w-4xl mx-auto mb-8">
-        <section style="min-height: calc(100vh - 10vh); display: flex; flex-direction: column; justify-content: center; align-items: center; padding-top: 3rem; padding-bottom: 3rem;">
-            <!--
-                portfolio
-            -->
-            <section id="portfolio" class="mb-12">
-                <figure class="md:flex">
-                    <img class="w-48 h-48 rounded-full mx-auto md:mx-12" src="assets/img/smori_square.jpg" alt="smori_square.jpg" width="512" height="512">
-                    <div class="text-center md:text-left">
-                        <figcaption class="font-extralight leading-none pt-2">
-                            <div>
-                                Dr.
-                            </div>
-                            <div class="text-2xl font-bold">
-                                Shohei Mori
-                            </div>
-                            <div class="py-4">
-                                Junior Research Group Leader<br>
-                                @ VISUS & EXC IntCDC, University of Stuttgart, Germany
-                            </div>
-                            <div>
-                                Guest Associate Professor (Global)<br>
-                                @ Keio Univ., Japan
-                            </div>
-                            <div class="pt-4">
-                                <a href="mailto: s.mori.jp@ieee.org"><i class="fa-solid fa-envelope fa-lg"></i></a> |
-                                <a href="https://scholar.google.com/citations?user=U5lf_WEAAAAJ&hl=en&oi=sra" target="_blank"><i class="ai ai-google-scholar-square ai-lg"></i></a>
-                                <a href="https://orcid.org/0000-0003-0540-7312" target="_blank"><i class="fa-brands fa-orcid fa-lg"></i></a>
-                                <a href="https://www.linkedin.com/in/shohei-mori-66678818a" target="_blank"><i class="fa-brands fa-linkedin fa-lg"></i></a>
-                                <a href="https://www.researchgate.net/profile/Shohei-Mori" target="_blank"><i class="fa-brands fa-researchgate fa-lg"></i></a>
-                                <a href="https://github.com/Mugichoko445" target="_blank"><i class="fa-brands fa-github fa-lg"></i></a>
-                                <a href="https://twitter.com/Mugichoko445" target="_blank"><i class="fab fa-twitter fa-lg"></i></a> |
-                                <a href="assets/pdf/CV_ShoheiMORI.pdf" target="_blank">CV</a>
-                            </div>
-                        </figcaption>
-                    </div>
-                </figure>
-            </section>
-            <!--
-                short bio
-            -->
-            <section id="bio" class="max-w-4xl mx-auto font-extralight md:px-24 px-6">
-                <p>
-                    Dr. Shohei Mori is a Junior Research Group Leader of the <a class="underline underline-offset-2" href="https://mediated-reality.github.io/" target="_blank">Mediated Reality Group <i class="fa-solid fa-square-arrow-up-right"></i></a> at the <a class="underline underline-offset-2" href="https://www.visus.uni-stuttgart.de/en/" target="_blank">Visualization Research Center (VISUS) <i class="fa-solid fa-square-arrow-up-right"></i></a> and the <a class="underline underline-offset-2" href="https://www.intcdc.uni-stuttgart.de/" target="_blank">Cluster of Excellence IntCDC <i class="fa-solid fa-square-arrow-up-right"></i></a>, University of Stuttgart, Germany. He also serves as a Guest Associate Professor (Global) at <a class="underline underline-offset-2" href="http://www.hvrl.ics.keio.ac.jp/current-members/" target="_blank">Keio University<i class="fa-solid fa-square-arrow-up-right"></i></a>, Japan, and is a member of the <a class="underline underline-offset-2" href="https://www.re2.uni-stuttgart.de/en/" target="_blank">Stuttgart Research Focus Re/producing Realities (Re2) <i class="fa-solid fa-square-arrow-up-right"></i></a>.</p>
-                <p class="pt-5">
-                    His research focuses on 3D vision for XR (with “X” representing any kind of reality).
-                    He addresses challenges in vision and graphics with a strong emphasis on human-centered computing. His work has been published in top-tier conferences and journals, including IEEE ISMAR, IEEE VR, ACM CHI, ACM UIST, ACM VRST, and IEEE TVCG.
-                    He has received several prestigious awards, including the IEEE VR Best Paper Award (2022), IEEE ISMAR Best Paper Award (2021, 2023) Nominee (2023), IEEE ISMAR Best Demo Award (2015), and the SIG-MR Award (2025). He served as an Associate Paper Co-Chair for IEEE ISMAR 2025 and currently serves as a Program Co-Chair for IEEE VR 2026.
-                </p>
-                <p class="pt-5 font-mono">More >> <a href="more.html#honors" class="hover:underline underline-offset-2">Honors</a>,  <a href="more.html#grants" class="hover:underline underline-offset-2">Grants</a>, <a href="more.html#teaching" class="hover:underline underline-offset-2">Teaching</a>, and <a href="more.html#services" class="hover:underline underline-offset-2">Services</a></p>
-            </section>
-        </section>
-    </main>
+        <!-- About Me Title -->
+        <div class="mt-12 mb-6">
+          <h1 class="text-4xl font-bold">About me</h1>
+          <hr class="border-0 my-2">
+          <p class="text-xl text-gray-700 mt-3">
+            Researcher in human-centered 3D vision for XR.
+          </p>
+        </div>
 
-    <!-- footer -->
-    <div id="footer"></div>
-    <script>
-        fetch("footer.html")
-            .then(response => response.text())
-            .then(html => {
-                document.getElementById("footer").innerHTML = html;
-                // Wait for footer to load, then update the year
-                document.getElementById('year').innerHTML = new Date().getFullYear();
-            });
-    </script>
+        <hr class="border-0 my-4">
+
+        <!-- Bio Text -->
+        <div class="text-base leading-relaxed text-gray-800 mb-6 space-y-4">
+          <p>
+            I am a <strong>Junior Research Group Leader</strong> at the <a href="https://www.visus.uni-stuttgart.de/en/" target="_blank" class="underline">Visualization Research Center (VISUS)</a> and the <a href="https://www.intcdc.uni-stuttgart.de/" target="_blank" class="underline">Cluster of Excellence IntCDC</a> at the <strong>University of Stuttgart, Germany</strong>. I additionally serve as a <strong>Guest Associate Professor (Global)</strong> at <a href="http://www.hvrl.ics.keio.ac.jp/current-members/" target="_blank" class="underline">Keio University</a>, Japan, and contribute to the <a href="https://www.re2.uni-stuttgart.de/en/" target="_blank" class="underline">Stuttgart Research Focus Re/producing Realities (Re2)</a>. I lead the <a href="https://mediated-reality.github.io/" target="_blank" class="underline"><strong>Mediated Reality Group</strong></a>.
+          </p>
+          <p>
+            My research focuses on <strong>3D vision for XR</strong> with an emphasis on <strong>human-centered computing</strong> approaches to vision and graphics challenges. I investigate how computational methods can mediate and augment human perception of the physical world.
+          </p>
+          <p>
+            My work has been published in premier venues including <strong>IEEE VR</strong>, <strong>IEEE ISMAR</strong>, ACM SIGGRAPH Asia, ECCV, IEEE/CVF WACV, ACM CHI, ACM UIST, ACM VRST, and IEEE TVCG.
+            Multiple works have received awards, including the <strong>IEEE VR Best Paper Award</strong> (2022), <strong>IEEE ISMAR Best Paper Award</strong> (2021, 2023), <strong>IEEE ISMAR Best Demo Award</strong> (2015), and the <strong>SIG-MR Award</strong> (2025).
+          </p>
+          <p>
+            I serve as Paper Co-Chair for IEEE VR 2027 and previously served as Program Co-Chair for IEEE VR 2026 and Associate Paper Co-Chair for IEEE ISMAR 2025.
+          </p>
+        </div>
+
+        <!-- Award Callout -->
+        <!--
+        <div class="flex gap-3 items-start p-4 rounded bg-subtle mb-8">
+          <div class="text-xl flex-shrink-0">🏆️</div>
+          <div class="text-base leading-relaxed">
+            <strong>IEEE VR Best Paper Award</strong> (2022) &middot; <strong>IEEE ISMAR Best Paper Award</strong> (2021, 2023) &middot; <strong>IEEE ISMAR Best Demo Award</strong> (2015) &middot; <strong>SIG-MR Award</strong> (2025)
+          </div>
+        </div>
+        -->
+
+        <hr class="border-0 my-12">
+
+        <!-- Share Section -->
+        <div class="flex items-center gap-3">
+          <span class="text-sm text-gray-500">Share</span>
+          <ul class="flex items-center gap-4 list-none p-0 m-0">
+            <li>
+              <a title="Twitter" aria-label="Twitter (opens in a new tab)" target="_blank" rel="noopener" class="text-muted no-underline hover:text-accent text-lg" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmugichoko445.github.io%2F&text=Shohei+Mori%2C+PhD">
+                <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a title="LinkedIn" aria-label="LinkedIn (opens in a new tab)" target="_blank" rel="noopener" class="text-muted no-underline hover:text-accent text-lg" href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fmugichoko445.github.io%2F&title=Shohei+Mori%2C+PhD">
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a title="Facebook" aria-label="Facebook (opens in a new tab)" target="_blank" rel="noopener" class="text-muted no-underline hover:text-accent text-lg" href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmugichoko445.github.io%2F&t=Shohei+Mori%2C+PhD">
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+              </a>
+            </li>
+            <li>
+              <a title="Email" aria-label="Email (opens in a new tab)" target="_blank" rel="noopener" class="text-muted no-underline hover:text-accent text-lg" href="mailto:?body=https%3A%2F%2Fmugichoko445.github.io%2F&subject=Shohei+Mori%2C+PhD">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- FEATURED RESEARCH -->
+    <section class="mt-16 mb-16">
+      <div class="flex items-baseline justify-between mb-5">
+        <h2 class="text-2xl font-bold">Featured Research</h2>
+        <a href="research.html" class="border border-accent rounded-xl text-sm px-3 py-1 text-accent hover:bg-accent hover:text-white transition-colors no-underline">View all →</a>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+        <!-- IntelliCap -->
+        <a href="research.html#cap-intelligent-btn" class="group relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col no-underline">
+          <div class="overflow-hidden flex-shrink-0">
+            <img src="assets/img/projects/yasunaga_ismar25.jpg" alt="IntelliCap" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-3 flex-1 transition-opacity duration-200 group-hover:opacity-0">
+            <div class="text-sm font-semibold leading-snug text-gray-800">Intelligent Volume Capture</div>
+            <p class="text-xs text-gray-500 mt-1">Human-centered 3D vision and AR for consistent and comprehensive scene capture.</p>
+          </div>
+          <div class="absolute inset-0 bg-white/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-center p-4">
+            <span class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Intelligent Volume Capture</span>
+            <div class="text-sm font-semibold leading-snug text-gray-800 mb-2">IntelliCap: Intelligent Guidance for Consistent View Sampling</div>
+            <div class="text-xs text-gray-500">IEEE ISMAR 2025</div>
+          </div>
+        </a>
+
+        <!-- Think While You Map -->
+        <a href="research.html#rep-scene-btn" class="group relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col no-underline">
+          <div class="overflow-hidden flex-shrink-0">
+            <img src="assets/img/projects/bickici_eccv26.jpg" alt="Think While You Map" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-3 flex-1 transition-opacity duration-200 group-hover:opacity-0">
+            <div class="text-sm font-semibold leading-snug text-gray-800">Scene Understanding with Scene Graphs</div>
+            <p class="text-xs text-gray-500 mt-1">Vision-language agents reason about 3D scene semantics.</p>
+          </div>
+          <div class="absolute inset-0 bg-white/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-center p-4">
+            <span class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Scene Understanding with Scene Graphs</span>
+            <div class="text-sm font-semibold leading-snug text-gray-800 mb-2">Think While You Map: Asynchronous Vision-Language Agents for Incremental 3D Scene Graphs</div>
+            <div class="text-xs text-gray-500">ECCV 2026</div>
+          </div>
+        </a>
+
+        <!-- InpaintFusion -->
+        <a href="research.html#rep-dr-btn" class="group relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col no-underline">
+          <div class="overflow-hidden flex-shrink-0">
+            <img src="assets/img/projects/mori_tvcg20.jpg" alt="InpaintFusion" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-3 flex-1 transition-opacity duration-200 group-hover:opacity-0">
+            <div class="text-sm font-semibold leading-snug text-gray-800">Diminished Reality</div>
+            <p class="text-xs text-gray-500 mt-1">Removing 3D objects from a live scene for computationally mediated reality.</p>
+          </div>
+          <div class="absolute inset-0 bg-white/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-center p-4">
+            <span class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Diminished Reality</span>
+            <div class="text-sm font-semibold leading-snug text-gray-800 mb-2">InpaintFusion: Incremental RGB-D Inpainting for 3D Scenes</div>
+            <div class="text-xs text-gray-500">IEEE TVCG (2020) · IEEE ISMAR 2020</div>
+          </div>
+        </a>
+
+        <!-- Perceived Weight of Mediated Reality Sticks -->
+        <a href="research.html#exp-perception-btn" class="group relative overflow-hidden rounded-xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow flex flex-col no-underline">
+          <div class="overflow-hidden flex-shrink-0">
+            <img src="assets/img/projects/hashiguchi_tvcg25.jpg" alt="Perceived Weight of Mediated Reality Sticks" class="w-full aspect-square object-cover group-hover:scale-105 transition-transform duration-300">
+          </div>
+          <div class="p-3 flex-1 transition-opacity duration-200 group-hover:opacity-0">
+            <div class="text-sm font-semibold leading-snug text-gray-800">Perceptual Modulation in XR</div>
+            <p class="text-xs text-gray-500 mt-1">Illusory effects arise from visual augmentation operating through mediated reality</p>
+          </div>
+          <div class="absolute inset-0 bg-white/95 opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col justify-center p-4">
+            <span class="text-xs font-semibold uppercase tracking-widest text-accent mb-2">Perceptual Modulation in XR</span>
+            <div class="text-sm font-semibold leading-snug text-gray-800 mb-2">Perceived Weight of Mediated Reality Sticks</div>
+            <div class="text-xs text-gray-500">IEEE TVCG (2025) · IEEE VR 2026</div>
+          </div>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL ACTIVITY, AWARDS & TEACHING -->
+    <section class="mt-20 pb-8">
+
+      <h2 class="text-2xl font-bold mb-8">Professional Activity, Awards, and Teaching</h2>
+
+      <!-- HONORS -->
+      <div class="mb-12">
+        <div class="tracking-widest uppercase text-xs font-semibold border-b border-gray-200 pb-1 mb-5 text-gray-400">Honors</div>
+        <h3 class="text-base font-semibold mb-3 mt-5">Awards</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">IEEE VR 2026, Best Research Demo Award Nominee for<br><em>Experiencing Weight Illusion in AR Extended Displays: A Portable Community Demo</em></div>
+          <div class="py-1">Design Association of Augmented Experience (DAAX) 2026, Good Experience Design Student Award for<br><em>Not All WIP Are Perceived Equally: Different Speed Expectations in Seated Walk-in-Place Locomotion</em></div>
+          <div class="py-1">SIG-MR 2025, SIG-MR Award for<br><em>Toward Multi-Plane Image Reconstruction from a Casually Captured Focal Stack</em> (in Japanese)</div>
+          <div class="py-1">MIRU 2024, Interactive Presentation Award for<br><em>Multi-layer Image Generation from Synthetic Defocus Image Evaluation</em> (in Japanese)</div>
+          <div class="py-1">MIRU 2024, Student Encouragement Award for<br><em>Depth Estimation Using Event Focal Stack</em> (in Japanese)</div>
+          <div class="py-1">IEEE ISMAR 2023, Best Journal Paper Award for<br><em>Multi-layer Scene Representation from Composed Focal Stacks</em></div>
+          <div class="py-1">IEEE ISMAR 2023, Best Journal Paper Award Nominee for<br><em>Exemplar-Based Inpainting for 6DOF Virtual Reality Photos</em></div>
+          <div class="py-1">IEEE VR 2022, Best Journal Paper Award for<br><em>Video See-Through Mixed Reality with Focus Cues</em></div>
+          <div class="py-1">IIEEJ 2022, Best Journal Paper Award for<br><em>Visual Odometry Adjusted to the Scale of a Global Map</em> (in Japanese)</div>
+          <div class="py-1">JSCAS 2022, Best Paper Award for<br><em>3D Structure Estimation of the Surgical Field from Multi-view Video ―Towards the Free-viewpoint Visualization of Open Surgery―</em> (in Japanese)</div>
+          <div class="py-1">IEEE ISMAR 2021, Best Conference Paper Award for<br><em>Neural Cameras: Learning Camera Characteristics for Coherent Mixed Reality Rendering</em></div>
+          <div class="py-1">KELVAR @ IEEE VR 2020, Best Paper Award for<br><em>Tools for Teaching Mining Students in Virtual Reality based on 360° Video Experiences</em></div>
+          <div class="py-1">ICVSS 2016, Best Reading Group</div>
+          <div class="py-1">IEEE ISMAR 2015, Best Demo Award for<br><em>DOMINO (Do Mixed-reality Non-stop) Toppling</em></div>
+          <div class="py-1">KJMR 2015, Best Presentation Award for<br><em>An AR/MR Camera Tracker Using View Dependent Texture Mapping</em></div>
+          <div class="py-1">KJMR 2014, Best Presentation Award for<br><em>Building a Data Acquisition Studio for Diminished Reality Research</em></div>
+          <div class="py-1">Ritsumeikan University PASEAR 2009, Dean Education Award</div>
+          <div class="py-1">Ritsumeikan University PASEAR 2008, Education Award</div>
+          <div class="py-1">Ritsumeikan University PASEAR 2007, Award for Excellence</div>
+        </div>
+
+        <!-- GRANTS -->
+        <h3 class="text-base font-semibold mb-3 mt-5">Grants</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">Exzellenzclusters 2120 IntCDC, Participating Researcher (€284,790, Apr. 2026–Jun. 2029)<br><em><a href="https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-43-1/" target="_blank" class="text-accent hover:underline">AI and Imaging Methods to Characterise the Performance of Biofibre Systems</a></em></div>
+          <div class="py-1">Ritsumeikan International Collaborative Research Promotion Program (Startup), Counterpart Principal Investigator (¥1M, Apr. 2024–Mar. 2025)<br><em>Immersive 3D Spatial Editing for Large Workspace with a Stretchable Stylus and a Hand-held Canvas</em></div>
+          <div class="py-1">FWF P33634, Co-Investigator (€407,116, Jan. 2021–Dec. 2024)<br><em><a href="https://graz.pure.elsevier.com/en/projects/fwf-3ddr-real-time-three-dimensional-diminished-reality" target="_blank" class="text-accent hover:underline">3DDR – Real-time Three-Dimensional Diminished Reality</a></em></div>
+          <div class="py-1">AVL List GmbH, Expert Researcher (Apr. 2023–Oct. 2023)<br><em>Proof-of-Concept zur Modifikation von Sensordaten</em></div>
+          <div class="py-1">R-GIRO, Project Member (Apr. 2021–Mar. 2026)<br><em><a href="http://www.ritsumei.ac.jp/rgiro/activity/program/fourth/projects/hayashi.html/" target="_blank" class="text-accent hover:underline">An Interdisciplinary Research Center on Supporting Cognitive and Communication for Elderly</a></em></div>
+          <div class="py-1">Grant-in-Aid for Young Scientists (B), 17K12729, Principal Investigator (¥4.03M, Apr. 2017–Sep. 2018)<br><em><a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-17K12729/" target="_blank" class="text-accent hover:underline">Perceptually High Contrast Optical See-Through HMD based on Adaptation</a></em></div>
+          <div class="py-1">Grant-in-Aid for JSPS Fellows (PD), 16J05114, Research Fellow (¥4.42M, Apr. 2016–Sep. 2018)<br><em><a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-16J05114/" target="_blank" class="text-accent hover:underline">Research on Mixed and Augmented Reality Using Light Field Cameras</a></em></div>
+          <div class="py-1">Grant-in-Aid for JSPS Fellows (DC-1), 13J09193, Research Fellow (¥3.0M, Apr. 2013–Mar. 2016)<br><em><a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-13J09193/" target="_blank" class="text-accent hover:underline">Two Approaches for Improving the Expressiveness of Mixed Reality Space</a></em></div>
+          <div class="py-1">Grant-in-Aid for Scientific Research (S), 24220004, Research Collaborator (May 2012–Mar. 2017)<br><em><a href="https://kaken.nii.ac.jp/en/grant/KAKENHI-PROJECT-24220004/" target="_blank" class="text-accent hover:underline">Systematizing and Consolidating a Technological Basis of Mixed and Diminished Reality Space</a></em></div>
+        </div>
+
+        <!-- Scholarships -->
+        <h3 class="text-base font-semibold mb-3 mt-5">Scholarships</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">Ritsumeikan University (2013–2016), KENKYU-SHOREI Scholarship S<br><em>Prize Fellowship for Doctoral Degree Students, for JSPS DC1/DC2 achievers</em></div>
+          <div class="py-1">Ritsumeikan University (2011), Saionji Graduate School Encouragement Scholarship<br><em>For the top graduate</em></div>
+          <div class="py-1">Ritsumeikan University (2010), Saionji Ikuei Scholarship<br><em>For the top three high achievers</em></div>
+          <div class="py-1">Ritsumeikan University (2009), Saionji Ikuei Scholarship<br><em>For the top three high achievers</em></div>
+          <div class="py-1">Ritsumeikan University (2008), Saionji Ikuei Scholarship<br><em>For the top three high achievers</em></div>
+        </div>
+      </div>
+
+      <!-- TEACHING -->
+      <div class="mb-12">
+        <div class="tracking-widest uppercase text-xs font-semibold border-b border-gray-200 pb-1 mb-5 text-gray-400">Teaching</div>
+
+        <h3 class="text-base font-semibold mb-3 mt-5 text-gray-700">Lecturer</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">"Image-Based and Neural Rendering" (Advanced Seminar) at University of Stuttgart (WS2024)<br><em>Lectures, scientific writing, and presentation organization</em></div>
+          <div class="py-1">"Virtual Reality" (Research Seminar) at TU Graz (2022–2024)<br><em>Organization of weekly students' research presentations</em></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Guest Lecturer</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">"Real-Time Graphics" at University of Stuttgart (with Dieter Schmalstieg, SS2025)<br><em>Lectures on image-based and neural rendering</em></div>
+          <div class="py-1">"Cognitive Science Research Center Study Group" at Ritsumeikan University (organized by Asako Kimura, 21.11.2024)<br><em>Invited lecture on "Augmented Reality Research in Austria and Germany"</em></div>
+          <div class="py-1">"Mixed Reality Technologies" at FH Salzburg (with Markus Tatzgern, SS2025, SS2026)<br><em>Lectures on diminished reality</em></div>
+          <div class="py-1">"Realtime Visualisation" at FH Salzburg (with Markus Tatzgern, WS2020–WS2023)<br><em>Lectures on image-based rendering; assignment design on light field reparameterization and AR-based capturing</em></div>
+          <div class="py-1">"Augmented Reality" at TU Graz (with Denis Kalkofen et al., WS2018–WS2023)<br><em>Lectures on visual tracking, camera calibration, image-based rendering, and diminished reality</em></div>
+          <div class="py-1">"Virtual Reality" at TU Graz (with Dieter Schmalstieg / Clemens Arth, SS2022–SS2024)<br><em>Lecture on image-based rendering, plenoptic cameras, light field displays, and neural rendering</em></div>
+          <div class="py-1">"Biomedical Visualization / AK Computergraphics" at TU Graz (with Denis Kalkofen, WS2022, WS2023)<br><em>Lecture on light field theory, imaging, and microscopy</em></div>
+          <div class="py-1">"Information Engineering Special Lecture Series" at Keio University (organized by Maki Sugimoto, 25.11.2022)<br><em>Invited lecture on "What we can/cannot see through today's mixed reality"</em></div>
+          <div class="py-1">"Visual Informatics Lecture Series" at Osaka Electro-Communication University (organized by
+             Akira Kimachi, 6.3.2023)<br><em>Invited lecture on "Why is 'place CG there' in AR still challenging"</em></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Teaching Assistant</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">"Scientific Writing" at TU Graz (with Peter Mohr, WS2022)<br><em>Provided topics for student research and description</em></div>
+          <div class="py-1">"Computer Vision and Graphics" at TU Graz (with Markus Steinberger, Peter Mohr, Ana Stanescu, and Lukas Radl, SS2024)<br><em>Managed CG assignment and conducted plagiarism interviews</em></div>
+          <div class="py-1">"Experiments in Media Technology – Virtual/Mixed Reality" at Ritsumeikan University (2011, 2012)<br><em>Group work support and assignment evaluations</em></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Invited Lab Talks</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">Keio University (with Peter Mohr-Ziak and Ana Stanescu, organized by Hideo Saito, 27.11.2024)<br><em>Augmented Reality Research in Austria and Germany</em></div>
+          <div class="py-1">Ritsumeikan University (with Peter Mohr-Ziak and Ana Stanescu, organized by Asako Kimura, 20.11.2024)<br><em>Augmented Reality Research in Austria and Germany</em></div>
+          <div class="py-1">FH Salzburg (organized by Markus Tatzgern, 30.11.2023)<br><em>Mediated Reality: 3D Real-World Augmentation and Beyond</em></div>
+          <div class="py-1">NAIST (organized by Hideaki Uchiyama, 22.11.2023)<br><em>Through the Looking Glass of Mediated Reality</em></div>
+          <div class="py-1">University of Stuttgart (organized by Dieter Schmalstieg, 28.10.2023)<br><em>Lenses to See the World and Us in Mediated Reality</em></div>
+          <div class="py-1">Osaka University (organized by Daisuke Iwai, 8.03.2023)<br><em>Towards Editable World and Understanding It</em></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Student Supervision</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-1">Bachelor Thesis Supervisor — Christopher Gaug (University of Stuttgart), "Generating 3D Hedge Mazes from Base 2D Maps" (01.08.2025)</div>
+          <div class="py-1">Master Thesis Supervisor — Jonas Geiselhart (University of Stuttgart), "Investigating Challenges in Generalizing Neural Radiance Fields with Learned Scene Priors" (27.06.2025)</div>
+          <div class="py-1">Bachelor Thesis Supervisor — Tobias Kemmler (University of Stuttgart), "Generating 3D Topiaries from Base Geometric Shapes" (13.06.2025)</div>
+          <div class="py-1">Ph.D. Thesis Examiner — Mana Masuda (Keio University), "Tracking and Scene Representation for Fast-moving Cameras by Event Data Synthesis" (07.11.2024)</div>
+        </div>
+      </div>
+
+      <!-- PROFESSIONAL SERVICE -->
+      <div class="mb-12">
+        <div class="tracking-widest uppercase text-xs font-semibold border-b border-gray-200 pb-1 mb-5 text-gray-400">Professional service</div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Organizing Committee</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">Paper Co-Chair for <a href="https://ieeevr.org/2027/committees/conference-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2027</a></div>
+          <div class="py-0.5">Program Co-Chair for <a href="https://ieeevr.org/2026/committees/conference-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2026</a></div>
+          <div class="py-0.5">Associate Paper Co-Chair for <a href="https://www.ieeeismar.net/2025/committee/organizers/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2025</a></div>
+          <div class="py-0.5">Student Volunteer Co-Chair for <a href="https://chi2025.acm.org/organizing/" target="_blank" class="text-accent hover:underline">ACM CHI 2025</a></div>
+          <div class="py-0.5">Award Co-Chair for <a href="https://sigmr.vrsj.org/apmar2024/committee.html" target="_blank" class="text-accent hover:underline">APMAR 2024</a></div>
+          <div class="py-0.5">General Co-Chair for <a href="https://sites.google.com/keio.jp/ismar2024-iw-p3hse/" target="_blank" class="text-accent hover:underline">IW-P3HSE 2024</a></div>
+          <div class="py-0.5">Co-Organizer for <a href="https://dreaming.ikim.nrw/" target="_blank" class="text-accent hover:underline">DREAMING Challenge 2024</a></div>
+          <div class="py-0.5">Doctoral Consortium Co-Chair for IEEE ISMAR <a href="https://ismar2020.ismar.net/committees/" target="_blank" class="text-accent hover:underline">2020</a>, <a href="https://ismar23.org/ismar-conference-committee/" target="_blank" class="text-accent hover:underline">2023</a></div>
+          <div class="py-0.5">Web Co-Chair for <a href="https://ieeevr.org/2019/committees/conference.html" target="_blank" class="text-accent hover:underline">IEEE VR 2019</a></div>
+          <div class="py-0.5">Demo Co-Chair for <a href="https://ismar2018.vgtc.org/committee_conference/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2018</a></div>
+          <div class="py-0.5">General Co-Chair for <a href="http://www.hvrl.ics.keio.ac.jp/hdcd4mar/" target="_blank" class="text-accent hover:underline">HDCD4MAR 2017</a></div>
+          <div class="py-0.5">Local Chair for <a href="http://www.hvrl.ics.keio.ac.jp/pots/symp/2016/" target="_blank" class="text-accent hover:underline">PoTS Symposium 2017</a></div>
+          <div class="py-0.5">Publication Co-Chair for <a href="http://conference.vrsj.org/ac2017/committee/committee.html" target="_blank" class="text-accent hover:underline">VRSJ Annual Conf. 2017</a></div>
+          <div class="py-0.5">Workshop Organizing Chair for <a href="http://www.rm.is.ritsumei.ac.jp/IWDR2016/" target="_blank" class="text-accent hover:underline">IWDR 2016</a></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-5 text-gray-700">Program Committee</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">Evaluator for IMPRS-IS (2025, 2026)</div>
+          <div class="py-0.5">Review Committee &amp; Technical Administration for Cluster of Excellence IntCDC (2025–2026)</div>
+          <div class="py-0.5">International Program Committee for IEEE ISMAR 2026</div>
+          <div class="py-0.5">International Program Committee for ACM VRST 2026</div>
+          <div class="py-0.5">Super-Committee Member for <a href="https://ieeevr.org/2025/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2025</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2025/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2025</a></div>
+          <div class="py-0.5">International Program Committee for ACM VRST 2025</div>
+          <div class="py-0.5">International Program Committee for <a href="https://www.vmv2025.fau.de/committee/" target="_blank" class="text-accent hover:underline">VMV 2025</a></div>
+          <div class="py-0.5">Super-Committee Member for <a href="https://ieeevr.org/2024/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2024</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2024/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2024</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://www.ieeeismar.net/2024/index.html%3Fp=565.html" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2024</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2023/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2023</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ismar23.org/ismar-st-program-committee/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2023</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2022/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2022</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ismar2022.org/ismar-st-program-committee/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2022</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2021/committees/program-committee/" target="_blank" class="text-accent hover:underline">IEEE VR 2021</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ismar21.org/science-and-technology-program-committee/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2021</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2020/committees/program.html" target="_blank" class="text-accent hover:underline">IEEE VR 2020</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ismar2020.ismar.net/scitech-committee/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2020</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://web3d.siggraph.org/archive/web3d2020/conference/" target="_blank" class="text-accent hover:underline">Web3D 2020</a></div>
+          <div class="py-0.5">International Program Committee for <a href="https://ieeevr.org/2019/committees/program.html" target="_blank" class="text-accent hover:underline">IEEE VR 2019</a></div>
+          <div class="py-0.5">International Program Committee for <a href="http://icat.vrsj.org/2017/" target="_blank" class="text-accent hover:underline">ICAT-EGVE 2017</a></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Session Chairs</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">Session Chair for <a href="https://ieeevr.org/2026/program/papers/#session-22" target="_blank" class="text-accent hover:underline">IEEE VR 2026</a></div>
+          <div class="py-0.5">Session Chair for <a href="https://ieeevr.org/2025/program/papers/#44" target="_blank" class="text-accent hover:underline">IEEE VR 2025</a></div>
+          <div class="py-0.5">Session Chair for <a href="https://ieeeismar.org/paper-sessions-tuesday/#ps13-computer-vision-and-machine-learning-for-xr-2-scene-understanding" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2024</a></div>
+          <div class="py-0.5">Session Chair for <a href="https://ieeevr.org/2024/program/papers/#WE4H" target="_blank" class="text-accent hover:underline">IEEE VR 2024</a></div>
+          <div class="py-0.5">Session Chair for <a href="https://ismar21.org/program/accepted-papers/#session7" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2021</a></div>
+          <div class="py-0.5">Session Chair for <a href="https://ismar2020.org/program/" target="_blank" class="text-accent hover:underline">IEEE ISMAR 2020</a></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Mentorship</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">Doctoral Consortium Mentor for IEEE ISMAR 2026</div>
+          <div class="py-0.5">Speed Mentorship Mentor for <a href="https://ieeecs-media.computer.org/media/conferences/vr/vr2026-meet-the-mentors.pdf" target="_blank" class="text-accent hover:underline">IEEE VR 2026</a></div>
+          <div class="py-0.5">Doctoral Consortium Mentor for <a href="https://ieeevr.org/2026/program/doctoral-consortium/" target="_blank" class="text-accent hover:underline">IEEE VR 2026</a></div>
+          <div class="py-0.5">Doctoral Consortium Mentor for <a href="https://ieeevr.org/2025/program/doctoral-consortium/" target="_blank" class="text-accent hover:underline">IEEE VR 2025</a></div>
+          <div class="py-0.5">Doctoral Consortium Mentor for <a href="https://ieeevr.org/2024/program/doctoral-consortium/" target="_blank" class="text-accent hover:underline">IEEE VR 2024</a></div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Conference Reviewer</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">ACM SIGGRAPH Asia 2026</div>
+          <div class="py-0.5">ACM UIST 2026</div>
+          <div class="py-0.5">ACM SIGGRAPH Asia 2023</div>
+          <div class="py-0.5">ACM SIGGRAPH Asia 2025 (Emerging Technology)</div>
+          <div class="py-0.5">ACM CHI 2025 (Late-Breaking Work)</div>
+          <div class="py-0.5">MICCAI 2025</div>
+          <div class="py-0.5">ACM SIGGRAPH 2025</div>
+          <div class="py-0.5">ACM SIGGRAPH 2024</div>
+          <div class="py-0.5">IEEE ISBI DREAMING Challenge 2024</div>
+          <div class="py-0.5">ACM CHI 2023</div>
+          <div class="py-0.5">IEEE/RSJ IROS 2023</div>
+          <div class="py-0.5">ICAT-EGVE 2022 (Posters/Demos)</div>
+          <div class="py-0.5">ACM CHI 2020</div>
+          <div class="py-0.5">IEEE InfoVis 2020</div>
+          <div class="py-0.5">ACM VRST 2019</div>
+          <div class="py-0.5">IEEE ISMAR 2019</div>
+          <div class="py-0.5">Augmented Human (AH) 2019</div>
+          <div class="py-0.5">APMAR 2019</div>
+          <div class="py-0.5">ICAT-EGVE 2019</div>
+          <div class="py-0.5">IEEE ISMAR 2018</div>
+          <div class="py-0.5">APMAR 2018</div>
+          <div class="py-0.5">IEEE ISMAR 2017</div>
+          <div class="py-0.5">ICAT-EGVE 2017</div>
+          <div class="py-0.5">IEEE VR 2018</div>
+          <div class="py-0.5">IWDR 2016</div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Journal Reviewer</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">IEEE Trans. on Visualization and Computer Graphics (TVCG) (2018, 2020–2025)</div>
+          <div class="py-0.5">IEEE Trans. on Multimedia (2016, 2021, 2022)</div>
+          <div class="py-0.5">IEEE Computer Graphics and Applications (CG&amp;A) (2020)</div>
+          <div class="py-0.5">IEEE Trans. on Image Processing (TIP) (2023, 2024)</div>
+          <div class="py-0.5">IEEE Trans. on Instrumentation and Measurement (TIM) (2020)</div>
+          <div class="py-0.5">Springer Virtual Reality (VR) (2023, 2024)</div>
+          <div class="py-0.5">International Journal of Human-Computer Interaction (2025)</div>
+          <div class="py-0.5">Frontiers in Virtual Reality (2021, 2024)</div>
+          <div class="py-0.5">Frontiers in Signal Processing (2024)</div>
+          <div class="py-0.5">IPSJ Trans. on Computer Vision and Applications (CVA) (2017, 2019)</div>
+          <div class="py-0.5">IEICE Trans. on Information and Systems (2017, 2018)</div>
+          <div class="py-0.5">ITE Trans. on Media Technology and Applications (MTA) (2015)</div>
+          <div class="py-0.5">Technologies – Information and Communication Technologies (2017)</div>
+          <div class="py-0.5">Virtual Worlds (2023, 2024)</div>
+          <div class="py-0.5">Concurrency and Computation: Practice and Experience (CCPE) (2021)</div>
+          <div class="py-0.5">Trans. of the Virtual Reality Society of Japan (VRSJ) (2016, 2017, 2021, 2022)</div>
+          <div class="py-0.5">Multimedia Tools and Applications (MTA) (2023)</div>
+          <div class="py-0.5">Indonesian Journal of Electrical Engineering and Computer Science (IJEECS) (2023)</div>
+        </div>
+
+        <h3 class="text-base font-semibold mb-3 mt-7 text-gray-700">Working Member</h3>
+        <div class="text-xs text-gray-700">
+          <div class="py-0.5">Participating Researcher for <a href="https://www.intcdc.uni-stuttgart.de/" target="_blank" class="text-accent hover:underline">EXC IntCDC</a> <a href="https://www.intcdc.uni-stuttgart.de/research/research-projects/rp-43-1/" target="_blank" class="text-accent hover:underline">RP43-1</a> (2025–present)</div>
+          <div class="py-0.5">Member for <a href="https://www.re2.uni-stuttgart.de/en/" target="_blank" class="text-accent hover:underline">Stuttgart Research Focus Re/producing Realities (Re2)</a> (2025–present)</div>
+          <div class="py-0.5">Specially Appointed Member for <a href="https://www.ipsj.or.jp/english/" target="_blank" class="text-accent hover:underline">IPSJ</a> <a href="https://www.ipsj.or.jp/annai/committee/info-WP/" target="_blank" class="text-accent hover:underline">Info-WorkPlace</a> (2023–2025)</div>
+          <div class="py-0.5">Academic Journal Committee for <a href="https://vrsj.org/english/about/" target="_blank" class="text-accent hover:underline">Virtual Reality Society of Japan</a> (2020–2024)</div>
+          <div class="py-0.5">Newsletter Committee for <a href="https://vrsj.org/english/about/" target="_blank" class="text-accent hover:underline">Virtual Reality Society of Japan</a> (2016–2020)</div>
+          <div class="py-0.5">Secretary for <a href="http://www.hvrl.ics.keio.ac.jp/pots/index_eng.html" target="_blank" class="text-accent hover:underline">Technical Committee on Plenoptic Time-Space Technology</a> (2016–2019)</div>
+          <div class="py-0.5">Support Member for <a href="https://www.iso.org/committee/45252.html" target="_blank" class="text-accent hover:underline">ISO/IEC JTC 1/SC 24/WG 9</a> (2016–2019)</div>
+          <div class="py-0.5">Support Member for TrakMark (2015, 2016)</div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <hr class="border-0 my-12">
+
+  <!-- FOOTER -->
+  <footer class="bg-surface border-t border-gray-200">
+    <div class="max-w-site mx-auto px-4">
+      <hr class="border-0 my-8">
+      <div class="text-center text-sm text-gray-700">
+        <span>&copy; 2026 Shohei Mori</span>
+        <span class="mx-2">&middot;</span>
+        <a href="/privacy_policy" class="text-accent">Privacy Policy</a>
+      </div>
+      <hr class="border-0 my-8">
+    </div>
+  </footer>
+
+  <!-- SCROLL TO TOP -->
+  <button
+    id="scroll-to-top"
+    aria-label="Scroll to top"
+    style="position:fixed; bottom:1.5rem; right:1.5rem; z-index:9999;
+           width:2.5rem; height:2.5rem; border-radius:9999px;
+           background:#4b5563; color:#fff; border:none; cursor:pointer;
+           display:flex; align-items:center; justify-content:center;
+           box-shadow:0 2px 8px rgba(0,0,0,0.25);
+           opacity:0; pointer-events:none; transition:opacity 0.2s;"
+    onmouseover="this.style.background='#374151'"
+    onmouseout="this.style.background='#4b5563'"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="20" height="20">
+      <path fill-rule="evenodd" d="M10 17a.75.75 0 0 1-.75-.75V5.56L5.78 9.03a.75.75 0 0 1-1.06-1.06l4.5-4.5a.75.75 0 0 1 1.06 0l4.5 4.5a.75.75 0 0 1-1.06 1.06L10.75 5.56v10.69A.75.75 0 0 1 10 17Z" clip-rule="evenodd" />
+    </svg>
+  </button>
+  <script>
+    (function () {
+      var btn = document.getElementById('scroll-to-top');
+      window.addEventListener('scroll', function () {
+        var visible = window.scrollY > 300;
+        btn.style.opacity = visible ? '1' : '0';
+        btn.style.pointerEvents = visible ? 'auto' : 'none';
+      });
+    })();
+  </script>
+
+  <!-- MOBILE CONTACT MODAL -->
+  <div id="contact-modal" class="modal-overlay fixed inset-0 z-50 bg-black/50" onclick="if(event.target===this) this.classList.remove('open')">
+    <div class="bg-white p-6 rounded overflow-y-auto w-[90%] max-w-[25rem] max-h-[80vh]">
+      <!-- Profile in modal -->
+      <div class="w-1/3 mx-auto mb-4">
+        <div class="shadow-[0_0_0_4px_white]">
+          <div class="relative w-full bg-gray-300 pt-[100%]">
+            <img
+              src="./assets/img/smori_square.jpg"
+              alt="Shohei Mori"
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text-xl font-bold">Shohei Mori</div>
+      <div class="text-sm text-gray-700 mt-1">Junior Research Group Leader</div>
+      <hr class="border-0 border-t border-[#e0e0e0] my-3">
+      <p class="text-sm mb-1"><a href="mailto:s.mori.jp@ieee.org" class="text-accent">s.mori.jp@ieee.org</a></p>
+      <hr class="border-0 my-2">
+      <p class="text-sm">Visualization Research Center (VISUS)</p>
+      <p class="text-sm">University of Stuttgart, Germany</p>
+      <hr class="border-0 my-4">
+      <!-- Social links in modal -->
+      <div class="grid grid-cols-2 gap-x-4">
+        <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+          <span class="w-4 h-4 flex items-center justify-center shrink-0">
+            <i class="ai ai-google-scholar" aria-hidden="true"></i>
+          </span>
+          <a href="https://scholar.google.com/citations?user=U5lf_WEAAAAJ&hl=en&oi=sra" target="_blank" rel="noopener noreferrer" class="text-accent text-sm">Google Scholar</a>
+        </div>
+        <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+          <span class="w-4 h-4 flex items-center justify-center shrink-0">
+            <i class="ai ai-researchgate" aria-hidden="true"></i>
+          </span>
+          <a href="https://www.researchgate.net/profile/Shohei-Mori" target="_blank" rel="noopener noreferrer" class="text-accent text-sm">ResearchGate</a>
+        </div>
+        <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+          <span class="w-4 h-4 flex items-center justify-center shrink-0">
+            <i class="ai ai-orcid" aria-hidden="true"></i>
+          </span>
+          <a href="https://orcid.org/0000-0003-0540-7312" target="_blank" rel="noopener noreferrer" class="text-accent text-sm">ORCID</a>
+        </div>
+        <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+          <span class="w-4 h-4 flex items-center justify-center shrink-0">
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+          </span>
+          <a href="https://twitter.com/Mugichoko445" target="_blank" rel="noopener noreferrer" class="text-accent text-sm">Twitter</a>
+        </div>
+        <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+          <span class="w-4 h-4 flex items-center justify-center shrink-0">
+            <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+          </span>
+          <a href="https://www.linkedin.com/in/shohei-mori-66678818a" target="_blank" rel="noopener noreferrer" class="text-accent text-sm">LinkedIn</a>
+        </div>
+        <div class="flex items-center gap-2 mb-2 text-[0.9rem]">
+          <span class="w-4 h-4 flex items-center justify-center shrink-0">
+            <i class="fa-brands fa-github" aria-hidden="true"></i>
+          </span>
+          <a href="https://github.com/Mugichoko445" target="_blank" rel="noopener noreferrer" class="text-accent text-sm">GitHub</a>
+        </div>
+      </div>
+      <hr class="border-0 my-4">
+      <button
+        class="bg-accent text-white px-5 py-2 rounded cursor-pointer inline-block text-[0.9rem] no-underline hover:bg-accent-dark hover:text-white"
+        onclick="document.getElementById('contact-modal').classList.remove('open')"
+      >Close</button>
+    </div>
+  </div>
+
 </body>
-
 </html>
