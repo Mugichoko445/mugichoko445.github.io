@@ -687,6 +687,14 @@ video {
   margin-left: 0.125rem;
 }
 
+.ml-1{
+  margin-left: 0.25rem;
+}
+
+.ml-2{
+  margin-left: 0.5rem;
+}
+
 .mt-1{
   margin-top: 0.25rem;
 }
@@ -721,14 +729,6 @@ video {
 
 .mt-7{
   margin-top: 1.75rem;
-}
-
-.ml-2{
-  margin-left: 0.5rem;
-}
-
-.ml-1{
-  margin-left: 0.25rem;
 }
 
 .block{
@@ -1161,6 +1161,11 @@ video {
   padding-right: 0.25rem;
 }
 
+.px-2{
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-3{
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -1199,11 +1204,6 @@ video {
 .py-6{
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-}
-
-.px-2{
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 .pb-1{
@@ -1292,6 +1292,10 @@ video {
   line-height: 2.5rem;
 }
 
+.text-\[0\.65rem\]{
+  font-size: 0.65rem;
+}
+
 .text-\[0\.9rem\]{
   font-size: 0.9rem;
 }
@@ -1319,10 +1323,6 @@ video {
 .text-xs{
   font-size: 0.75rem;
   line-height: 1rem;
-}
-
-.text-\[0\.65rem\]{
-  font-size: 0.65rem;
 }
 
 .font-bold{
@@ -1373,12 +1373,12 @@ video {
   line-height: 1.25;
 }
 
-.tracking-widest{
-  letter-spacing: 0.1em;
-}
-
 .tracking-wide{
   letter-spacing: 0.025em;
+}
+
+.tracking-widest{
+  letter-spacing: 0.1em;
 }
 
 .text-accent{
