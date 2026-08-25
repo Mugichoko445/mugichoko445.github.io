@@ -1207,7 +1207,12 @@
       var el = document.getElementById(btnId);
       if (!el) return;
       toggleSubtopic(match[1]);
-      setTimeout(function () { el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 100);
+      setTimeout(function () {
+        var header = document.querySelector('header');
+        var offset = (header ? header.offsetHeight : 0) + 16;
+        var top = el.getBoundingClientRect().top + window.pageYOffset - offset;
+        window.scrollTo({ top: top, behavior: 'smooth' });
+      }, 100);
     })();
   </script>
 
