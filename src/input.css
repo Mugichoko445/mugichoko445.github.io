@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700&display=swap');
+@import 'tailwindcss';
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@config '../tailwind.config.js';
+
+/* Hidden unless the JS toggle adds .open (contact modal, mobile nav dropdown) */
+.modal-overlay {
+  display: none;
+}
+.modal-overlay.open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mobile-menu {
+  display: none;
+}
+#mobile-menu.open {
+  display: block;
+}
