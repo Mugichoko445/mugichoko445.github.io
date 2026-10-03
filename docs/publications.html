@@ -215,6 +215,7 @@
           <div class="flex flex-wrap gap-1.5 mt-3 mb-2 items-center">
             <button class="pub-type-btn active" data-type="all">All types</button>
             <button class="pub-type-btn" data-type="journal">Journal</button>
+            <button class="pub-type-btn" data-type="preprint">Preprint</button>
             <button class="pub-type-btn" data-type="conference">Conference</button>
             <button class="pub-type-btn" data-type="workshop">Workshop</button>
             <button class="pub-type-btn" data-type="tutorial">Tutorial</button>
@@ -337,6 +338,13 @@
                     <a class="text-xs bg-gray-200 text-gray-800 px-1 rounded-xl hover:opacity-90" href="https://github.com/Mugichoko445/NEF" target="_blank">GitHub</a>
                 </li>
                 <li class="pub-item hover:bg-subtle transition-colors rounded-md px-1 leading-relaxed">
+                    <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Preprint</span>
+                    Xuening Tian, Dieter Schmalstieg, and Shohei Mori,
+                    "<span class="font-semibold">3D-GIMP: When 3D Gaussian Inpainting Meets PatchMatch</span>,"
+                    arXiv:2607.20789 (2026.07)
+                    <a class="text-xs bg-gray-200 text-gray-800 px-1 rounded-xl hover:opacity-90" href="https://arxiv.org/abs/2607.20789" target="_blank">arXiv</a>
+                </li>
+                <li class="pub-item hover:bg-subtle transition-colors rounded-md px-1 leading-relaxed">
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Poster</span>
                     Ayaka Yasunaga, Hideo Saito, Dieter Schmalstieg, and Shohei Mori,
                     "<span class="font-semibold">Assessing Spatial View Sampling Evaluation Across Participants</span>,"
@@ -419,7 +427,7 @@
                     <span class="text-xs border bg-gray-600 border-gray-600 text-slate-100 px-1">Preprint</span>
                     Yuna Kato, Shohei Mori, Hideo Saito, Yoshifumi Takatsume, Hiroki Kajita, and Mariko Isogawa,
                     "<span class="font-semibold">Disturbance-Free Surgical Video Generation from Multi-Camera Shadowless Lamps for Open Surgery</span>,"
-                    arXiv (2025.12)
+                    arXiv:2512.08577 (2025.12)
                     <a class="text-xs bg-gray-200 text-gray-800 px-1 rounded-xl hover:opacity-90" href="https://isogawa.ics.keio.ac.jp/projects/SingleViewSurgicalVideo/" target="_blank">Project Page</a>
                     <a class="text-xs bg-gray-200 text-gray-800 px-1 rounded-xl hover:opacity-90" href="https://arxiv.org/abs/2512.08577" target="_blank">arXiv</a>
                     <a class="text-xs bg-gray-200 text-gray-800 px-1 rounded-xl hover:opacity-90" href="https://github.com/isogawalab/SingleViewSurgicalVideo" target="_blank">GitHub</a>
@@ -1190,6 +1198,7 @@
 
     const typeMap = {
         'journal': 'journal',
+        'preprint': 'preprint',
         'conference': 'conference',
         'workshop': 'workshop',
         'poster': 'poster',
